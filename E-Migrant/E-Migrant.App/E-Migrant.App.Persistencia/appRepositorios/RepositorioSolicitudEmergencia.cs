@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using E_Migrant.App.Dominio.SolicitudEmergencia;
+using E_Migrant.App.Dominio.Entidades;
 
 namespace E_Migrant.App.Persistencia.appRepositorios
 {
@@ -61,7 +61,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
                 
                 _appContext.SaveChanges();
             }
-            return solicitudemergenciaEncontrado;
+            return solicitudemergenciaEncontrada;
         }
     }
 }

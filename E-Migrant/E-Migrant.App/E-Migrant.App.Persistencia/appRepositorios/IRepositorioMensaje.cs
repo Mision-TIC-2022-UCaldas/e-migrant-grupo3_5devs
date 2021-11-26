@@ -4,7 +4,7 @@ using E_Migrant.App.Dominio.Entidades;
 
 namespace E_Migrant.App.Persistencia.appRepositorios
 {
-    public interface IRepositorioMensajes
+    public interface IRepositorioMensaje
     {
         IEnumerable<Mensaje> GetAllMensaje();
 
