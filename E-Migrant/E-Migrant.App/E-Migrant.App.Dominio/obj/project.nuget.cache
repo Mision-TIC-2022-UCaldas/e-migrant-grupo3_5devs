@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "L2Cor2AIGIaeoOA80R5y73vU2WFvXhqAGP8fxGdBHFiw9qaAlyA0+aa8dHl6SaPSlOrhU6twVKAp6XDS5HYNFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Repositorios\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Dominio\\E-Migrant.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\USUARIO\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
