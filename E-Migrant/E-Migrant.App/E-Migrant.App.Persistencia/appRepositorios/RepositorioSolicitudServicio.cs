@@ -21,7 +21,8 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         {
             _appContext=appContext;
         }
-        SolicitudServicio IRepositorioSolicitudServicio.AddSolicitudServicio(SolicitudServicio solicitudservicio)
+
+        SolicitudSerivicio IRepositorioSolicitudServicio.AddSolicitudServicio(SolicitudSerivicio solicitudservicio)
         {
             var solicitudservicioAdicionado= _appContext.SolicitudServicio.Add(solicitudservicio);
             _appContext.SaveChanges();
@@ -38,17 +39,17 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             return true;
         }
 
-        IEnumerable<SolicitudServicio> IRepositorioSolicitudServicio.GetAllSolicitudServicio()
+        IEnumerable<SolicitudSerivicio> IRepositorioSolicitudServicio.GetAllSolicitudServicio()
         {
             return _appContext.SolicitudServicio;
         }
 
-        SolicitudServicio IRepositorioSolicitudServicio.GetSolicitudServicio(int idSolicitudServicio)
+        SolicitudSerivicio IRepositorioSolicitudServicio.GetSolicitudServicio(int idSolicitudServicio)
         {
             return _appContext.SolicitudServicio.FirstOrDefault(m=>m.Id == idSolicitudServicio);
         }
 
-        SolicitudServicio IRepositorioSolicitudServicio.UpdateSolicitudServicio(SolicitudServicio solicitudservicio)
+        SolicitudSerivicio IRepositorioSolicitudServicio.UpdateSolicitudServicio(SolicitudSerivicio solicitudservicio)
         {
             var solicitudservicioEncontrado = _appContext.SolicitudServicio.FirstOrDefault(m=>m.Id == solicitudservicio.Id);
             if (solicitudservicioEncontrado!=null)

@@ -66,7 +66,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
                 
                 _appContext.SaveChanges();
             }
-            return entidadEncontrado;
+            return entidadEncontrada;
         }
     }
 }
