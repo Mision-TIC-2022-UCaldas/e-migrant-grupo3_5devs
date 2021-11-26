@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj": {}
+    "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj": {
+    "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj",
         "projectName": "Calentamiento.App.Dominio",
-        "projectPath": "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\leand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leand\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -50,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.415\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.117\\RuntimeIdentifierGraph.json"
         }
       }
     }
