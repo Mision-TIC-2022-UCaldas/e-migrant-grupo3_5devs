@@ -1,0 +1,11 @@
+﻿@page
+@model E_Migrant.App.Frontend.Pages.ServiciosMigranteModel
+@{
+}
+<h1>Ver base de datos</h1>
+@foreach (var migrante in Model.Migrantes)
+{
+    <tr>
+        <td>@migrante.Nombre</td>
+    </tr>
+}
