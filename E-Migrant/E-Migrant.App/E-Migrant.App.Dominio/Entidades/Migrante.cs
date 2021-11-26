@@ -6,17 +6,17 @@ namespace E_Migrant.App.Dominio.Entidades
 {
     public class Migrante:Usuario
     {
-        [Required]
+        [Required (ErrorMessage = "El Nombre es obligatorio.")]
         public string Nombre {get;set;} 
-        [Required]
+        [Required (ErrorMessage = "Los Apellidos son obligatorios.")]
         public string Apellidos {get;set;}
-        [Required]
+        [Required (ErrorMessage = "El Tipo de Documento es obligatorio.")]
         public TipoDocumento tipoDocumento {get;set;}
-        [Required]
+        [Required (ErrorMessage = "El Numero de Documento es obligatorio.")]
         public string NumeroDocumento {get;set;}
-        [Required]
+        [Required (ErrorMessage = "El País de Origen es obligatorio.")]
         public string PaisOrigen {get;set;}
-        [Required]
+        [Required (ErrorMessage = "La Fecha de Nacimiento es obligatoria.")]
         public DateTime FechaNacimiento {get;set;}
         public string Email {get;set;}
         public string Telefono {get;set;}

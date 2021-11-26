@@ -6,19 +6,19 @@ namespace E_Migrant.App.Dominio.Entidades
     public class Entidad
     {
         public int Id {get;set;}
-        [Required]
+        [Required (ErrorMessage = "La razón social es obligatoria.")]
         public string RazonSocial {get;set;} 
-        [Required]
+        [Required (ErrorMessage = "El NIT es obligatorio.")]
         public string Nit {get;set;}
-        [Required]
+        [Required (ErrorMessage = "La Dirección es obligatoria.")]
         public string Direccion {get;set;}
-        [Required]
+        [Required (ErrorMessage = "La Ciudad es obligatoria.")]
         public string Ciudad {get;set;}
-        [Required]
+        [Required (ErrorMessage = "El Telefono es obligatorio.")]
         public string Telefono {get;set;}
-        [Required]
+        [Required (ErrorMessage = "El Sector es obligatorio.")]
         public Sector Sector {get;set;}
-        [Required]
+        [Required (ErrorMessage = "El Tipo de Servicio es obligatorio.")]
         public TipoServicio TipoServicio {get;set;}
         public string Email {get;set;}
         public string PaginaWeb {get;set;}
