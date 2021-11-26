@@ -8,9 +8,10 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         public DbSet<Entidad> Entidad {get;set;}
         public DbSet<Migrante> Migrante {get;set;}
         public DbSet<Servicio> Servicio {get;set;}
-        public DbSet<SolicitudSerivicio> SolicitudServicio {get;set;}
+        public DbSet<SolicitudServicio> SolicitudServicio {get;set;}
         public DbSet<SolicitudEmergencia> SolicitudEmergencia {get;set;}
-        public DbSet<Novedades> Migrante {get;set;}
+        public DbSet<Novedad> Novedad {get;set;}
+        public DbSet<Mensaje> Mensaje {get;set;}
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if (!optionsBuilder.IsConfigured)
