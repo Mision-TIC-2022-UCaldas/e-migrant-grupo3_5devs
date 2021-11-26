@@ -82,3 +82,4 @@ C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant
 C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\bin\Debug\netcoreapp3.1\E-Migrant.App.Persistencia.dll
 C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\bin\Debug\netcoreapp3.1\E-Migrant.App.Dominio.pdb
 C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\bin\Debug\netcoreapp3.1\E-Migrant.App.Persistencia.pdb
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\ServiciosMigrante.cshtml.g.cs

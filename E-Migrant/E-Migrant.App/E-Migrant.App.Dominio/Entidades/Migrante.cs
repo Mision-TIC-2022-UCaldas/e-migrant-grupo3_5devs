@@ -16,7 +16,8 @@ namespace E_Migrant.App.Dominio.Entidades
         public string NumeroDocumento {get;set;}
         [Required]
         public string PaisOrigen {get;set;}
-        [Required]
+        [Range(typeof(DateTime), "1/1/1800", "31/12/2050",
+        ErrorMessage = "La fecha debe estar {1} entre {2}")]
         public DateTime FechaNacimiento {get;set;}
         public string Email {get;set;}
         public string Telefono {get;set;}
