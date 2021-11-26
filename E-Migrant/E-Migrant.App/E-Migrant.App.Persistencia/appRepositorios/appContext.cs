@@ -4,11 +4,13 @@ namespace E_Migrant.App.Persistencia.appRepositorios
 {
     public class appContext: DbContext
     {
+        public DbSet<Usuario> Usuario {get;set;} // Leandro: ¿Si necesita una tabla?
         public DbSet<Entidad> Entidad {get;set;}
         public DbSet<Migrante> Migrante {get;set;}
         public DbSet<Servicio> Servicio {get;set;}
         public DbSet<SolicitudSerivicio> SolicitudServicio {get;set;}
         public DbSet<SolicitudEmergencia> SolicitudEmergencia {get;set;}
+        public DbSet<Novedades> Migrante {get;set;}
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if (!optionsBuilder.IsConfigured)

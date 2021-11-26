@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using E_Migrant.App.Dominio.SolicitudEmergenciaes;
+using E_Migrant.App.Dominio.SolicitudEmergencia;
 
 namespace E_Migrant.App.Persistencia.appRepositorios
 {
