@@ -1,0 +1,9 @@
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\bin\Debug\netstandard2.0\Calentamiento.App.Dominio.deps.json
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\bin\Debug\netstandard2.0\Calentamiento.App.Dominio.dll
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\bin\Debug\netstandard2.0\Calentamiento.App.Dominio.pdb
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\obj\Debug\netstandard2.0\Calentamiento.App.Dominio.csprojAssemblyReference.cache
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\obj\Debug\netstandard2.0\Calentamiento.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\obj\Debug\netstandard2.0\Calentamiento.App.Dominio.AssemblyInfo.cs
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\obj\Debug\netstandard2.0\Calentamiento.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\obj\Debug\netstandard2.0\Calentamiento.App.Dominio.dll
+C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Dominio\obj\Debug\netstandard2.0\Calentamiento.App.Dominio.pdb
