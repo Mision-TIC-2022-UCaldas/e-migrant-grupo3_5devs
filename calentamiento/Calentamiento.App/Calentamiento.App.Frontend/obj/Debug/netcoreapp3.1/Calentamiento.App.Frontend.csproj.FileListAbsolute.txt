@@ -74,3 +74,5 @@ C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamie
 C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Frontend\obj\Debug\netcoreapp3.1\Calentamiento.App.Frontend.dll
 C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Frontend\obj\Debug\netcoreapp3.1\Calentamiento.App.Frontend.pdb
 C:\Users\stive\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Frontend\obj\Debug\netcoreapp3.1\Calentamiento.App.Frontend.genruntimeconfig.cache
+C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Frontend\bin\Debug\netcoreapp3.1\Calentamiento.App.Dominio.dll
+C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\calentamiento\Calentamiento.App\Calentamiento.App.Frontend\bin\Debug\netcoreapp3.1\Calentamiento.App.Dominio.pdb
