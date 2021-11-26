@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leand\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Frontend\\Calentamiento.App.Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Frontend\\Calentamiento.App.Frontend.csproj",
       "projectName": "Calentamiento.App.Frontend",
-      "projectPath": "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Frontend\\Calentamiento.App.Frontend.csproj",
-      "packagesPath": "C:\\Users\\leand\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Frontend\\obj\\",
+      "projectPath": "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Frontend\\Calentamiento.App.Frontend.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leand\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -50,8 +50,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj"
+            "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\user\\5Devs\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj"
             }
           }
         }
@@ -82,7 +82,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.415\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.117\\RuntimeIdentifierGraph.json"
       }
     }
   }
