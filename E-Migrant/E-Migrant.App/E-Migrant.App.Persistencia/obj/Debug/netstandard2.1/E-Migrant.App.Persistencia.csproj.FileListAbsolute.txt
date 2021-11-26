@@ -1,0 +1,12 @@
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Persistencia.deps.json
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Persistencia.dll
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Persistencia.pdb
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.dll
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.pdb
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.csprojAssemblyReference.cache
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.AssemblyInfo.cs
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.csproj.CopyComplete
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.dll
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.pdb

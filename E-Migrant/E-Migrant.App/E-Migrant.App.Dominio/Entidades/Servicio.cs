@@ -12,6 +12,6 @@ namespace E_Migrant.App.Dominio.Entidades
         public EstadoServicio EstadoServicio {get;set;}
 
         //Evaluaciones
-        public System.Collections.Generic.List<EvaluacionServicio> Evaluaciones { get; set; }
+        //public System.Collections.Generic.List<EvaluacionServicio> Evaluaciones { get; set; }
     }
 }

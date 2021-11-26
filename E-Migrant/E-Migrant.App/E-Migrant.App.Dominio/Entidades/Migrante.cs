@@ -26,11 +26,11 @@ namespace E_Migrant.App.Dominio.Entidades
 
         //Relaciones 
         //Enmigrante solicita servicio
-        public SolicitudSerivicio solicitudServicio {get;set;}
+        //public SolicitudSerivicio solicitudServicio {get;set;}
         //Familiares y Amigos
         public System.Collections.Generic.List<Migrante> Amigos { get; set; }
         public System.Collections.Generic.List<Migrante> Familiares { get; set; }
-        public System.Collections.Generic.List<Categorias> Necesidades { get; set; }
+        //public System.Collections.Generic.List<string> Necesidades { get; set; }
 
     }
 }
