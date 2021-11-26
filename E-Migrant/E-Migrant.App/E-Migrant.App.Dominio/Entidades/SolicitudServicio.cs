@@ -1,7 +1,7 @@
 using System;
 namespace E_Migrant.App.Dominio.Entidades
 {
-    public class SolicitudSerivicio
+    public class SolicitudServicio
     {
         public int Id {get;set;}
         public Servicio Servicio {get;set;}

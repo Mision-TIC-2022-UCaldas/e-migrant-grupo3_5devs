@@ -6,18 +6,18 @@ namespace E_Migrant.App.Persistencia.appRepositorios
 {
     public interface IRepositorioSolicitudServicio
     {
-        IEnumerable<SolicitudSerivicio> GetAllSolicitudServicio();
+        IEnumerable<SolicitudServicio> GetAllSolicitudServicio();
 
         // Añadir
-        SolicitudSerivicio AddSolicitudServicio(SolicitudSerivicio solicitudservicio);
+        SolicitudServicio AddSolicitudServicio(SolicitudServicio solicitudservicio);
 
         // Actualizar
-        SolicitudSerivicio UpdateSolicitudServicio(SolicitudSerivicio solicitudservicio);
+        SolicitudServicio UpdateSolicitudServicio(SolicitudServicio solicitudservicio);
 
         // Borrar
         bool DeleteSolicitudServicio(int idSolicitudServicio);
 
         // ver
-        SolicitudSerivicio GetSolicitudServicio(int idSolicitudServicio);
+        SolicitudServicio GetSolicitudServicio(int idSolicitudServicio);
     }
 }

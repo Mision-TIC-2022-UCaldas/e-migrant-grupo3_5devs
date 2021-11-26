@@ -1,7 +1,7 @@
 using System;
 namespace E_Migrant.App.Dominio.Entidades
 {
-    public class Novedades
+    public class Novedad
     {
         public int Id {get;set;}
         public DateTime FechaInicio {get;set;}

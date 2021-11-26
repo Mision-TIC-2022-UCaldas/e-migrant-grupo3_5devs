@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using E_Migrant.App.Dominio.Entidades;
+using E_Migrant.App.Dominio.SolicitudEmergenciaes;
 
 namespace E_Migrant.App.Persistencia.appRepositorios
 {
