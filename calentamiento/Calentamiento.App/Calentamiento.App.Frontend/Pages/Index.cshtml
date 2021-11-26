@@ -38,7 +38,10 @@
     function calcularIMC() {
       let peso = document.getElementById('txtPeso').value;
       let altura = document.getElementById('txtAltura').value;
-      categoriaIMC();
+      imc = peso / (altura * altura)
+      event.preventDefault();
+      limpiarCampos();
+      categoriaIMC(imc);
     }
 
     function categoriaIMC(imc) {
@@ -59,8 +62,10 @@
         respuesta = `Su IMC es ${imc}. Se encuentra en obecidad tipo II.`;
       } else if(imc >= 40 && imc <50) {
         respuesta = `Su IMC es ${imc}. Se encuentra en obecidad tipo III morbida.`;
-      } else {
+      } else if(imc >= 50) {
         respuesta = `Su IMC es ${imc}. Se encuentra en obecidad tipo IV o extrema.`;
+    } else {
+      respuesta = "Ingrese unos datos validos.";
     }
     document.getElementById('respuesta').value = respuesta;
     }
