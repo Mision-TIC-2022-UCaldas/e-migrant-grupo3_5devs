@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace E_Migrant.App.Dominio.Entidades
 {
-    public class Entidad:Usuario
+    public class Entidad
     {
         public int Id {get;set;}
         [Required]
