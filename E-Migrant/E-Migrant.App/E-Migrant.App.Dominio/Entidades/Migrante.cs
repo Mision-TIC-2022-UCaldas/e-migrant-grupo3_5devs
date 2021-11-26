@@ -8,22 +8,22 @@ namespace E_Migrant.App.Dominio.Entidades
     {
         public int Id {get;set;}
         [Required]
-        public String Nombre {get;set;} 
+        public string Nombre {get;set;} 
         [Required]
-        public String Apellidos {get;set;}
+        public string Apellidos {get;set;}
         [Required]
         public TipoDocumento tipoDocumento {get;set;}
         [Required]
-        public String NumeroDocumento {get;set;}
+        public string NumeroDocumento {get;set;}
         [Required]
-        public String PaisOrigen {get;set;}
+        public string PaisOrigen {get;set;}
         [Required]
-        public Date FechaNacimiento {get;set;}
-        public String Email {get;set;}
-        public String Telefono {get;set;}
-        public String Direccion {get;set;}
-        public String Ciudad {get;set;}
-        public String SituacionLaboral {get;set;}
+        public DateTime FechaNacimiento {get;set;}
+        public string Email {get;set;}
+        public string Telefono {get;set;}
+        public string Direccion {get;set;}
+        public string Ciudad {get;set;}
+        public string SituacionLaboral {get;set;}
 
         //Relaciones 
         //Enmigrante solicita servicio

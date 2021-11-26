@@ -7,21 +7,21 @@ namespace E_Migrant.App.Dominio.Entidades
     {
         public int Id {get;set;}
         [Required]
-        public String RazonSocial {get;set;} 
+        public string RazonSocial {get;set;} 
         [Required]
-        public String Nit {get;set;}
+        public string Nit {get;set;}
         [Required]
-        public String Direccion {get;set;}
+        public string Direccion {get;set;}
         [Required]
-        public String Ciudad {get;set;}
+        public string Ciudad {get;set;}
         [Required]
-        public String Telefono {get;set;}
+        public string Telefono {get;set;}
         [Required]
         public Sector Sector {get;set;}
         [Required]
         public TipoServicio TipoServicio {get;set;}
-        public String Email {get;set;}
-        public String PaginaWeb {get;set;}
+        public string Email {get;set;}
+        public string PaginaWeb {get;set;}
 
 
     }

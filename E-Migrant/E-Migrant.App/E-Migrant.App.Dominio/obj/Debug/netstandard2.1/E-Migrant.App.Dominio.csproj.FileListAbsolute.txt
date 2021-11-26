@@ -1,0 +1,9 @@
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.csprojAssemblyReference.cache
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.AssemblyInfo.cs
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.deps.json
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.dll
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.pdb
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.dll
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.pdb
