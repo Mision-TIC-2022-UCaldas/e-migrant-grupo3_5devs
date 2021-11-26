@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace E_Migrant.App.Dominio.Entidades
 {
-    public class Migrante
+    public class Migrante:Usuario
     {
-        public int Id {get;set;}
         [Required]
         public string Nombre {get;set;} 
         [Required]
@@ -31,6 +30,7 @@ namespace E_Migrant.App.Dominio.Entidades
         //Familiares y Amigos
         public System.Collections.Generic.List<Migrante> Amigos { get; set; }
         public System.Collections.Generic.List<Migrante> Familiares { get; set; }
+        public System.Collections.Generic.List<Categorias> Necesidades { get; set; }
 
     }
 }

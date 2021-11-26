@@ -11,8 +11,12 @@ namespace E_Migrant.App.Dominio.Entidades
         public DateTime FechaAceptacionSolicitud {get;set;}
         public EstadoSolicitud estadoSolicitud {get;set;}
         public Entidad Entidad {get;set;}
+        public Migrante migrante {get;set;}
         
         public EvaluacionServicio Evaluacion {get;set;}
+        public EvaluacionServicio ComportamientoMigrante {get;set;}
+
+        //Tendríamos que agregar al migrante en la relación?
 
     }
 }

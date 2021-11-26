@@ -8,7 +8,8 @@ namespace E_Migrant.App.Dominio.Entidades
         Activo,
         Rechazado,
         Cancelado,
-        NegadoPorLaEntidad
+        NegadoPorLaEntidad,
+        Completado
 
     }
 }

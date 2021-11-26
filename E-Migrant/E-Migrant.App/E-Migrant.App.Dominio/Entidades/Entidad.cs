@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace E_Migrant.App.Dominio.Entidades
 {
-    public class Entidad
+    public class Entidad:Usuario
     {
         public int Id {get;set;}
         [Required]
@@ -22,7 +22,7 @@ namespace E_Migrant.App.Dominio.Entidades
         public TipoServicio TipoServicio {get;set;}
         public string Email {get;set;}
         public string PaginaWeb {get;set;}
-
+        public EvaluacionServicio evaluacionGerencia {get;set;}
 
     }
 }
