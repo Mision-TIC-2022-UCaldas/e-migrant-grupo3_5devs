@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Qwq4yRz2LAorBGrzH52TkbObNk9aSrcNVSD0vaAsRLvEcTPnYTRATYETiyK0xVyjeHf3cgbq5vTQVy3TZXqEaA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\stive\\e-migrant-grupo3_5devs\\calentamiento\\Calentamiento.App\\Calentamiento.App.Dominio\\Calentamiento.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stive\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\stive\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
