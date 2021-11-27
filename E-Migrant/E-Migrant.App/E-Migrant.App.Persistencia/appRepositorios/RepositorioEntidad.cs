@@ -23,9 +23,14 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         }
         Entidad IRepositorioEntidad.AddEntidad(Entidad entidad)
         {
-            var entidadAdicionada= _appContext.Entidad.Add(entidad);
-            _appContext.SaveChanges();
-            return entidadAdicionada.Entity;
+            var nitEncontrado = _appContext.Entidad.FirstOrDefault(m=>m.Nit == entidad.Nit);
+            if (nitEncontrado == null)
+            {    
+                var entidadAdicionada= _appContext.Entidad.Add(entidad);
+                _appContext.SaveChanges();
+                return entidadAdicionada.Entity;
+            }
+            return null;
         }
 
         bool IRepositorioEntidad.DeleteEntidad(int idEntidad)
