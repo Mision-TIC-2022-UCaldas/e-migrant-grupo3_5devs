@@ -24,3 +24,6 @@ namespace E_Migrant.App.Frontend
                 });
     }
 }
+
+//dotnet ef migrations add IdentityInitial --context IdentityDataContext
+//dotnet ef database update --context IdentityDataContext
