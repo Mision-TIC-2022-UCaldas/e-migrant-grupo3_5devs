@@ -32,19 +32,19 @@
                 <td>@migrante.Ciudad</td>
                 @* <td>@migrante.SituacionLaboral</td> *@
                 <td>
-                    <a class="btn btn-primary table-btn" asp-page="./DetallesMigrante" asp-route-idOficina="@migrante.Id">
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesMigrante" asp-route-idMigrante="@migrante.Id">
                         <i class="bi bi-info-circle" aria-hidden="true"></i>
                         Detalle
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-secondary table-btn" asp-page="./RegistroMigrante" asp-route-idOficina="@migrante.Id">
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroMigrante" asp-route-idMigrante="@migrante.Id">
                         <i class="bi bi-pencil-square" aria-hidden="true"></i>
                         Editar
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-danger table-btn" asp-page="./EliminarMigrante" asp-route-idOficina="@migrante.Id">
+                    <a class="btn btn-danger table-btn" asp-page="./EliminarMigrante" asp-route-idMigrante="@migrante.Id">
                         <i class="bi bi-trash" aria-hidden="true"></i>
                         Eliminar
                     </a>

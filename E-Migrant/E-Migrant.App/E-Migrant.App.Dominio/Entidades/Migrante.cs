@@ -4,8 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace E_Migrant.App.Dominio.Entidades
 {
-    public class Migrante:Usuario
+    public class Migrante
     {
+        public int Id {get;set;}
         [Required (ErrorMessage = "El Nombre es obligatorio.")]
         public string Nombre {get;set;} 
         [Required (ErrorMessage = "Los Apellidos son obligatorios.")]
@@ -28,8 +29,8 @@ namespace E_Migrant.App.Dominio.Entidades
         //Enmigrante solicita servicio
         //public SolicitudSerivicio solicitudServicio {get;set;}
         //Familiares y Amigos
-        public System.Collections.Generic.List<Migrante> Amigos { get; set; }
-        public System.Collections.Generic.List<Migrante> Familiares { get; set; }
+        //public System.Collections.Generic.List<Migrante> Amigos { get; set; }
+        //public System.Collections.Generic.List<Migrante> Familiares { get; set; }
         //public System.Collections.Generic.List<string> Necesidades { get; set; }
 
     }
