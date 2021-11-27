@@ -54,7 +54,6 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             if (usuarioEncontrado!=null)
             {
                 usuarioEncontrado.Username = usuario.Username;
-                usuarioEncontrado.Password = usuario.Password;
                 usuarioEncontrado.rol = usuario.rol;
                 
                 _appContext.SaveChanges();
