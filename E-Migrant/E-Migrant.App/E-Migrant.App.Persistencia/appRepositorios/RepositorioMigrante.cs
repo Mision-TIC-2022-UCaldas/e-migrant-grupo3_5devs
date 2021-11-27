@@ -23,9 +23,14 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         }
         Migrante IRepositorioMigrante.AddMigrante(Migrante migrante)
         {
-            var migranteAdicionado= _appContext.Migrante.Add(migrante);
-            _appContext.SaveChanges();
-            return migranteAdicionado.Entity;
+            var nitEncontrado = _appContext.Migrante.FirstOrDefault(m=>m.NumeroDocumento == migrante.NumeroDocumento);
+            if (nitEncontrado == null)
+            {
+                var migranteAdicionado= _appContext.Migrante.Add(migrante);
+                _appContext.SaveChanges();
+                return migranteAdicionado.Entity;
+            }
+            return null;
         }
 
         bool IRepositorioMigrante.DeleteMigrante(int idMigrante)
