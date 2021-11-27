@@ -1,4 +1,5 @@
 ﻿@page
+@using E_Migrant.App.Dominio.Entidades
 @model E_Migrant.App.Frontend.Pages.RegistroMigranteModel
 @{
 }
@@ -20,14 +21,9 @@
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="inputState">Tipo Documento:</label>
-                <input type="text" asp-for="migrante.tipoDocumento" class="form-control">
-                @* <select id="inputState" class="form-control">
-                    <option selected>Tipo de documento</option>
-                    <option>CC</option>
-                    <option>TI</option>
-                    <option>CE</option>
-                    <option>PS</option>
-                </select> *@
+                <select asp-for="migrante.tipoDocumento" asp-items="Html.GetEnumSelectList<TipoDocumento>()"
+                    class="form-control">
+                </select>
                 <span class="text-danger" asp-validation-for="migrante.tipoDocumento"></span>
             </div>
             <div class="col">
