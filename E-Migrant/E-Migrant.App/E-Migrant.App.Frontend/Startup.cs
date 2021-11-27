@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Authorization;
+using E_Migrant.App.Persistencia.appRepositorios;
 
 
 namespace E_Migrant.App.Frontend
@@ -27,10 +28,10 @@ namespace E_Migrant.App.Frontend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
 
             services.AddRazorPages();
             services.AddControllersWithViews();
+            //services.AddSingleton<IRepositorioNovedad, RepositorioNovedad>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

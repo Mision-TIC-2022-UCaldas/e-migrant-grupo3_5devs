@@ -11,7 +11,7 @@ namespace E_Migrant.App.Frontend.Pages
 {
     public class GerenciaModel : PageModel
     {
-        private static IRepositorioNovedad _repositorioNovedad = new RepositorioNovedad(new appContext());
+        private readonly IRepositorioNovedad _repositorioNovedad = new RepositorioNovedad(new appContext());
         public IEnumerable<Novedad> Novedads { get; set; }
         public void OnGet()
         {
