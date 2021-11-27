@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace E_Migrant.App.Persistencia.Migrations
 {
-    public partial class Entidades : Migration
+    public partial class Entidades1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,29 +30,18 @@ namespace E_Migrant.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Migrante",
+                name: "Novedad",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    tipoDocumento = table.Column<int>(type: "int", nullable: false),
-                    NumeroDocumento = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PaisOrigen = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Ciudad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SituacionLaboral = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    rol = table.Column<int>(type: "int", nullable: false)
+                    FechaInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DiasNovedad = table.Column<int>(type: "int", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Migrante", x => x.Id);
+                    table.PrimaryKey("PK_Novedad", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,6 +59,33 @@ namespace E_Migrant.App.Persistencia.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SolicitudEmergencia", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Usuario",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    rol = table.Column<int>(type: "int", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    tipoDocumento = table.Column<int>(type: "int", nullable: true),
+                    NumeroDocumento = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PaisOrigen = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Ciudad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SituacionLaboral = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuario", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -97,6 +113,34 @@ namespace E_Migrant.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Mensaje",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EstadoMensaje = table.Column<int>(type: "int", nullable: false),
+                    Contenido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EmisorId = table.Column<int>(type: "int", nullable: true),
+                    ReceptorId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mensaje", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Mensaje_Usuario_EmisorId",
+                        column: x => x.EmisorId,
+                        principalTable: "Usuario",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Mensaje_Usuario_ReceptorId",
+                        column: x => x.ReceptorId,
+                        principalTable: "Usuario",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MigranteMigrante",
                 columns: table => new
                 {
@@ -107,15 +151,15 @@ namespace E_Migrant.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_MigranteMigrante", x => new { x.AmigosId, x.FamiliaresId });
                     table.ForeignKey(
-                        name: "FK_MigranteMigrante_Migrante_AmigosId",
+                        name: "FK_MigranteMigrante_Usuario_AmigosId",
                         column: x => x.AmigosId,
-                        principalTable: "Migrante",
+                        principalTable: "Usuario",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MigranteMigrante_Migrante_FamiliaresId",
+                        name: "FK_MigranteMigrante_Usuario_FamiliaresId",
                         column: x => x.FamiliaresId,
-                        principalTable: "Migrante",
+                        principalTable: "Usuario",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -147,18 +191,28 @@ namespace E_Migrant.App.Persistencia.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_SolicitudServicio_Migrante_migranteId",
-                        column: x => x.migranteId,
-                        principalTable: "Migrante",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_SolicitudServicio_Servicio_ServicioId",
                         column: x => x.ServicioId,
                         principalTable: "Servicio",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_SolicitudServicio_Usuario_migranteId",
+                        column: x => x.migranteId,
+                        principalTable: "Usuario",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Mensaje_EmisorId",
+                table: "Mensaje",
+                column: "EmisorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Mensaje_ReceptorId",
+                table: "Mensaje",
+                column: "ReceptorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MigranteMigrante_FamiliaresId",
@@ -189,7 +243,13 @@ namespace E_Migrant.App.Persistencia.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Mensaje");
+
+            migrationBuilder.DropTable(
                 name: "MigranteMigrante");
+
+            migrationBuilder.DropTable(
+                name: "Novedad");
 
             migrationBuilder.DropTable(
                 name: "SolicitudEmergencia");
@@ -198,10 +258,10 @@ namespace E_Migrant.App.Persistencia.Migrations
                 name: "SolicitudServicio");
 
             migrationBuilder.DropTable(
-                name: "Migrante");
+                name: "Servicio");
 
             migrationBuilder.DropTable(
-                name: "Servicio");
+                name: "Usuario");
 
             migrationBuilder.DropTable(
                 name: "Entidad");

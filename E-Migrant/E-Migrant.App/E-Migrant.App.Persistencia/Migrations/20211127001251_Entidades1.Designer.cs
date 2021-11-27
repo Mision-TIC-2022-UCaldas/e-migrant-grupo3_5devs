@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20211126234155_Entidades1")]
+    [Migration("20211127001251_Entidades1")]
     partial class Entidades1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

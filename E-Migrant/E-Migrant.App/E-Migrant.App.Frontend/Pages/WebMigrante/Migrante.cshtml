@@ -1,0 +1,60 @@
+﻿@page
+@model E_Migrant.App.Frontend.Pages.MigranteModel
+@{
+}
+<h2>Listado de migrantes</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Tipo de documento</th>
+            <th>País de origen</th>
+            <th>Correo electronico</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Ciudad</th>
+            <th>Situacion laboral</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var migrante in Model.Migrantes)
+            {
+            <tr>
+                <td>@migrante.Nombre</td>
+                <td>@migrante.Apellidos</td>
+                <td>@migrante.tipoDocumento</td>
+                <td>@migrante.PaisOrigen</td>
+                <td>@migrante.Email</td>
+                <td>@migrante.Direccion</td>
+                <td>@migrante.Telefono</td>
+                <td>@migrante.Ciudad</td>
+                <td>@migrante.SituacionLaboral</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesMigrante" asp-route-idOficina="@migrante.Id">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        Detalle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./EditarMigrante" asp-route-idOficina="@migrante.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./EliminarMigrante" asp-route-idOficina="@migrante.Id">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            }
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary table-btn" asp-page="./RegistroMigrante">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Crear Migrante
+</a>

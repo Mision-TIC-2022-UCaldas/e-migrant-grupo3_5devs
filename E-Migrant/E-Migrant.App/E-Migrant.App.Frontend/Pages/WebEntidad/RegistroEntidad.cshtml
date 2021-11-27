@@ -1,0 +1,72 @@
+﻿@page
+@model E_Migrant.App.Frontend.Pages.RegistroEntidadModel
+@{
+}
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Razón social</label>
+                <input asp-for="entidad.RazonSocial" type="text" class="form-control" placeholder="Razón social">
+                <span class="text-danger" asp-validation-for="entidad.RazonSocial"></span>
+            </div>
+            <div class="col">
+                <label for="inputState">Nit</label>
+                <input asp-for="entidad.Nit" type="text" class="form-control" placeholder="Nit">
+                <span class="text-danger" asp-validation-for="entidad.Nit"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputState">Tipo Servicio:</label>
+                <input type="text" asp-for="entidad.TipoServicio" class="form-control">
+                @* <select id="inputState" class="form-control">
+                    <option selected>Tipo de documento</option>
+                    <option>CC</option>
+                    <option>TI</option>
+                    <option>CE</option>
+                    <option>PS</option>
+                    </select> *@
+                <span class="text-danger" asp-validation-for="entidad.TipoServicio"></span>
+            </div>
+            <div class="col">
+                <label for="inputState">Página web</label>
+                <input asp-for="entidad.PaginaWeb" type="text" class="form-control" placeholder="Url pagina web">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Sector</label>
+                <input type="text" asp-for="entidad.Sector" class="form-control">
+                <span class="text-danger" asp-validation-for="entidad.Sector"></span>
+            </div>
+            <div class="col">
+                <label for="exampleInputEmail1">Correo</label>
+                <input asp-for="entidad.Email" type="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Correo electronico">
+                <span class="text-danger" asp-validation-for="entidad.Email"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Telefono</label>
+                <input asp-for="entidad.Telefono" type="text" class="form-control" placeholder="Telefono">
+                <span class="text-danger" asp-validation-for="entidad.Telefono"></span>
+            </div>
+            <div class="col">
+                <label for="inputState">Ciudad</label>
+                <input asp-for="entidad.Ciudad" type="text" class="form-control" placeholder="Ciudad">
+                <span class="text-danger" asp-validation-for="entidad.Ciudad"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Direccion</label>
+                <input asp-for="entidad.Direccion" type="text" class="form-control" placeholder="Direccion">
+                <span class="text-danger" asp-validation-for="entidad.Direccion"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Crear</button>
+    </div>
+
+</form>

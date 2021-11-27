@@ -1,0 +1,60 @@
+﻿@page
+@model E_Migrant.App.Frontend.Pages.EntidadModel
+@{
+}
+<h2>Listado de Entidads</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Razón Social</th>
+            <th>Nit</th>
+            <th>Dirección</th>
+            <th>Ciudad</th>
+            <th>Telefono</th>
+            <th>Correo electronico</th>
+            <th>Pagina web</th>
+            <th>Sector</th>
+            <th>Tipo de servicio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var entidad in Model.Entidads)
+            {
+            <tr>
+                <td>@entidad.RazonSocial</td>
+                <td>@entidad.Nit</td>
+                <td>@entidad.Direccion</td>
+                <td>@entidad.Ciudad</td>
+                <td>@entidad.Telefono</td>
+                <td>@entidad.Email</td>
+                <td>@entidad.PaginaWeb</td>
+                <td>@entidad.Sector</td>
+                <td>@entidad.TipoServicio</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesEntidad" asp-route-idOficina="@entidad.Id">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        Detalle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./EditarEntidad" asp-route-idOficina="@entidad.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./EliminarEntidad" asp-route-idOficina="@entidad.Id">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            }
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary table-btn" asp-page="./RegistroEntidad">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Crear Entidad
+</a>
