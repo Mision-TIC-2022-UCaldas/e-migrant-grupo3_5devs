@@ -2,7 +2,7 @@
 @model E_Migrant.App.Frontend.Pages.EntidadModel
 @{
 }
-<h2>Listado de Entidads</h2>
+<h2>Listado de Entidades</h2>
 <table class="table">
     <thead>
         <tr>
@@ -32,19 +32,19 @@
                 <td>@entidad.Sector</td>
                 <td>@entidad.TipoServicio</td>
                 <td>
-                    <a class="btn btn-primary table-btn" asp-page="./DetallesEntidad" asp-route-idOficina="@entidad.Id">
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesEntidad" asp-route-idEntidad="@entidad.Id">
                         <i class="bi bi-info-circle" aria-hidden="true"></i>
                         Detalle
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-secondary table-btn" asp-page="./EditarEntidad" asp-route-idOficina="@entidad.Id">
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroEntidad" asp-route-idEntidad="@entidad.Id">
                         <i class="bi bi-pencil-square" aria-hidden="true"></i>
                         Editar
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-danger table-btn" asp-page="./EliminarEntidad" asp-route-idOficina="@entidad.Id">
+                    <a class="btn btn-danger table-btn" asp-page="./EliminarEntidad" asp-route-idEntidad="@entidad.Id">
                         <i class="bi bi-trash" aria-hidden="true"></i>
                         Eliminar
                     </a>

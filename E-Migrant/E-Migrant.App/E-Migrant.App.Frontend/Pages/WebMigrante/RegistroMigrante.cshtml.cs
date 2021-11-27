@@ -27,7 +27,7 @@ namespace E_Migrant.App.Frontend.Pages
 
             if (migrante == null)
             {
-                return RedirectToPage("./Migrante");
+                return RedirectToPage("./ServiciosMigrante");
             }
             else
             {
@@ -51,7 +51,7 @@ namespace E_Migrant.App.Frontend.Pages
                     _repositorioMigrante.AddMigrante(migrante);
                 }
             }
-            return RedirectToPage("./Migrante");
+            return RedirectToPage("./ServiciosMigrante");
         }
     }
 }

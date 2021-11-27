@@ -30,7 +30,7 @@
                 <td>@migrante.Direccion</td>
                 <td>@migrante.Telefono</td>
                 <td>@migrante.Ciudad</td>
-                <td>@migrante.SituacionLaboral</td>
+                @* <td>@migrante.SituacionLaboral</td> *@
                 <td>
                     <a class="btn btn-primary table-btn" asp-page="./DetallesMigrante" asp-route-idOficina="@migrante.Id">
                         <i class="bi bi-info-circle" aria-hidden="true"></i>
@@ -38,7 +38,7 @@
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-secondary table-btn" asp-page="./EditarMigrante" asp-route-idOficina="@migrante.Id">
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroMigrante" asp-route-idOficina="@migrante.Id">
                         <i class="bi bi-pencil-square" aria-hidden="true"></i>
                         Editar
                     </a>
