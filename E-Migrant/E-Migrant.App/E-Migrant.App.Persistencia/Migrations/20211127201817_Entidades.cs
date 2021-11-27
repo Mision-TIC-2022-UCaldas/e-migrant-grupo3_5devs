@@ -60,7 +60,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FechaInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DiasNovedad = table.Column<int>(type: "int", nullable: false),
-                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -91,7 +91,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     rol = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

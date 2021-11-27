@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20211127061609_Entidades")]
+    [Migration("20211127201817_Entidades")]
     partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -153,6 +153,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Descripcion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("DiasNovedad")
@@ -279,9 +280,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
                         .HasColumnType("nvarchar(max)");
