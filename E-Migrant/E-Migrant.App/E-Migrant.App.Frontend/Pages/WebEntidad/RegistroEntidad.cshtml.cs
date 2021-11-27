@@ -9,25 +9,25 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace E_Migrant.App.Frontend.Pages
 {
-    public class RegistroMigranteModel : PageModel
+    public class RegistroEntidadModel : PageModel
     {
-        private static IRepositorioMigrante _repositorioMigrante = new RepositorioMigrante(new appContext());
+        private static IRepositorioEntidad _repositorioEntidad = new RepositorioEntidad(new appContext());
         [BindProperty]
-        public Migrante migrante { get; set; }
-        public IActionResult OnGet(int? idMigrante)
+        public Entidad entidad { get; set; }
+        public IActionResult OnGet(int? idEntidad)
         {
-            if (idMigrante.HasValue)
+            if (idEntidad.HasValue)
             {
-                migrante = _repositorioMigrante.GetMigrante(idMigrante.Value);
+                entidad = _repositorioEntidad.GetEntidad(idEntidad.Value);
             }
             else
             {
-                migrante = new Migrante();
+                entidad = new Entidad();
             }
 
-            if (migrante == null)
+            if (entidad == null)
             {
-                return RedirectToPage("./Migrante");
+                return RedirectToPage("./Entidad");
             }
             else
             {
@@ -42,16 +42,16 @@ namespace E_Migrant.App.Frontend.Pages
             }
             else
             {
-                if (migrante.Id > 0)
+                if (entidad.Id > 0)
                 {
-                    _repositorioMigrante.UpdateMigrante(migrante);
+                    _repositorioEntidad.UpdateEntidad(entidad);
                 }
                 else
                 {
-                    _repositorioMigrante.AddMigrante(migrante);
+                    _repositorioEntidad.AddEntidad(entidad);
                 }
             }
-            return RedirectToPage("./Migrante");
+            return RedirectToPage("./Entidad");
         }
     }
 }

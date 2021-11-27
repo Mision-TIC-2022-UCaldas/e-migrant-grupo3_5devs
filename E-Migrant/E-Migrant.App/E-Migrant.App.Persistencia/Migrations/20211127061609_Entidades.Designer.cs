@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20211126234155_Entidades1")]
-    partial class Entidades1
+    [Migration("20211127061609_Entidades")]
+    partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -94,6 +94,55 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.HasIndex("ReceptorId");
 
                     b.ToTable("Mensaje");
+                });
+
+            modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Migrante", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Apellidos")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ciudad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaNacimiento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumeroDocumento")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaisOrigen")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SituacionLaboral")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("tipoDocumento")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Migrante");
                 });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Novedad", b =>
@@ -231,10 +280,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
@@ -247,67 +292,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuario");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Usuario");
-                });
-
-            modelBuilder.Entity("MigranteMigrante", b =>
-                {
-                    b.Property<int>("AmigosId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("FamiliaresId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AmigosId", "FamiliaresId");
-
-                    b.HasIndex("FamiliaresId");
-
-                    b.ToTable("MigranteMigrante");
-                });
-
-            modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Migrante", b =>
-                {
-                    b.HasBaseType("E_Migrant.App.Dominio.Entidades.Usuario");
-
-                    b.Property<string>("Apellidos")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ciudad")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Direccion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("FechaNacimiento")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NumeroDocumento")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PaisOrigen")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SituacionLaboral")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Telefono")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("tipoDocumento")
-                        .HasColumnType("int");
-
-                    b.HasDiscriminator().HasValue("Migrante");
                 });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Mensaje", b =>
@@ -353,21 +337,6 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Navigation("migrante");
 
                     b.Navigation("Servicio");
-                });
-
-            modelBuilder.Entity("MigranteMigrante", b =>
-                {
-                    b.HasOne("E_Migrant.App.Dominio.Entidades.Migrante", null)
-                        .WithMany()
-                        .HasForeignKey("AmigosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("E_Migrant.App.Dominio.Entidades.Migrante", null)
-                        .WithMany()
-                        .HasForeignKey("FamiliaresId")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

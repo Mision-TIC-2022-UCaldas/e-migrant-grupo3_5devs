@@ -1,3 +1,4 @@
+using System;
 namespace E_Migrant.App.Dominio.Entidades
 {
     public class Usuario
