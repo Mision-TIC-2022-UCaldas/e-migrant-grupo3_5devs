@@ -13,14 +13,17 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using E_Migrant.App.Persistencia.appRepositorios;
 using Microsoft.AspNetCore.Authentication.Google;
+using E_Migrant.App.Frontend.Areas.Identity.Data;
 
 namespace E_Migrant.App.Frontend
 {
     public class Startup
     {
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -28,7 +31,7 @@ namespace E_Migrant.App.Frontend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            
             services.AddRazorPages();
             services.AddControllersWithViews();
             //services.AddSingleton<IRepositorioNovedad, RepositorioNovedad>();
@@ -72,5 +75,6 @@ namespace E_Migrant.App.Frontend
                 
             });
         }
+        
     }
 }

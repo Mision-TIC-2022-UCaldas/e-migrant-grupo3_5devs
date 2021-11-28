@@ -4,7 +4,7 @@ namespace E_Migrant.App.Dominio.Entidades
     {
         Migrante,
         Entidad,
-        Gerencia,
-        Administracion
+        Gerente,
+        Administrador
     }
 }
