@@ -98,7 +98,30 @@ namespace E_Migrant.App.Frontend.Areas.Identity.Pages.Account
                     await _roleManager.CreateAsync(r);
                 }
             }
+            var email = "admin@admin.com";
+            var username = "admin@admin.com";
+            var password = "Admin12345$";
+            var user = new IdentityUser { UserName = username, Email = email };
+            
+            var usuarioExtraido = await _userManager.FindByNameAsync(username);
+            
 
+            if (usuarioExtraido==null)
+                {
+                    
+                    /*code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                        var callbackUrl = Url.Page(
+                        "/Account/ConfirmEmail",
+                        pageHandler: null,
+                        values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+                        protocol: Request.Scheme);*/
+                    await _userManager.CreateAsync(user, password);
+                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    await _userManager.ConfirmEmailAsync(user, code);
+                    await _userManager.AddToRoleAsync(user, "Administrador");
+                    /*await _emailSender.SendEmailAsync(email, "Confirm your email",
+                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");*/
+                }
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
