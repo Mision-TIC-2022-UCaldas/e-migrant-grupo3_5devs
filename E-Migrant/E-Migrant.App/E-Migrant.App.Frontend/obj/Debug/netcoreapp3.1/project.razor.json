@@ -14472,6 +14472,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\USUARIO\\Desktop\\Repositorios\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebEntidad\\Servicio.cshtml",
+      "TargetPath": "Pages\\WebEntidad\\Servicio.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\USUARIO\\Desktop\\Repositorios\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebGerencia\\RegistroNovedad.cshtml",
       "TargetPath": "Pages\\WebGerencia\\RegistroNovedad.cshtml",
       "FileKind": "mvc"
