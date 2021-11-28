@@ -16,3 +16,13 @@ C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.dll
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.pdb
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.deps.json
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.dll
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.pdb
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.AssemblyInfo.cs
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.dll
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Dominio\obj\Debug\netstandard2.1\E-Migrant.App.Dominio.pdb

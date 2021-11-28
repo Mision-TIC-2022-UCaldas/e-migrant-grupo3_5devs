@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20211128101814_Entidades")]
+    [Migration("20211128183311_Entidades")]
     partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -151,6 +151,28 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.HasIndex("MigranteId");
 
                     b.ToTable("Migrante");
+                });
+
+            modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Necesidad", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Categorias")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NivelPrioridad")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Necesidad");
                 });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Novedad", b =>

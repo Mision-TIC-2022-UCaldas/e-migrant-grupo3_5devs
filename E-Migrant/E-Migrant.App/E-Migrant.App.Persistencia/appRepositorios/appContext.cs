@@ -12,6 +12,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         public DbSet<SolicitudEmergencia> SolicitudEmergencia {get;set;}
         public DbSet<Novedad> Novedad {get;set;}
         public DbSet<Mensaje> Mensaje {get;set;}
+        public DbSet<Necesidad> Necesidad {get;set;}
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if (!optionsBuilder.IsConfigured)
