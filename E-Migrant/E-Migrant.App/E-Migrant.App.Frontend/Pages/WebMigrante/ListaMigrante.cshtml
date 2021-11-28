@@ -1,0 +1,113 @@
+﻿@page
+@model E_Migrant.App.Frontend.Pages.ListaMigranteModel
+@{
+}
+<h2>Listado de migrantes</h2>
+<form asp-page="./ListaMigrante" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por documento:
+            <input type="text" asp-for="@Model.buscar" pattern="^[0-9]+$">
+            <input type="submit" value="Buscar" class="btn btn-primary" />
+        </p>
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Tipo de documento</th>
+            <th>Numero de documento</th>
+            <th>País de origen</th>
+            <th>Correo electronico</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Ciudad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @if (Model.encontradoMigrante != null)
+            {
+            <tr>
+                <td>@Model.encontradoMigrante.Nombre</td>
+                <td>@Model.encontradoMigrante.Apellidos</td>
+                <td>@Model.encontradoMigrante.tipoDocumento</td>
+                <td>@Model.encontradoMigrante.NumeroDocumento</td>
+                <td>@Model.encontradoMigrante.PaisOrigen</td>
+                <td>@Model.encontradoMigrante.Email</td>
+                <td>@Model.encontradoMigrante.Direccion</td>
+                <td>@Model.encontradoMigrante.Telefono</td>
+                <td>@Model.encontradoMigrante.Ciudad</td>
+                    @* <td>@migrante.SituacionLaboral</td> *@
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesMigrante"
+                    asp-route-idMigrante="@Model.encontradoMigrante.Id">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        Detalle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroMigrante"
+                    asp-route-idMigrante="@Model.encontradoMigrante.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./EliminarMigrante"
+                    asp-route-idMigrante="@Model.encontradoMigrante.Id">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            }
+            else if(Model.encontradoMigrante == null)
+            {
+                @foreach (var migrante in Model.Migrantes)
+                {
+                <tr>
+                    <td>@migrante.Nombre</td>
+                    <td>@migrante.Apellidos</td>
+                    <td>@migrante.tipoDocumento</td>
+                    <td>@migrante.NumeroDocumento</td>
+                    <td>@migrante.PaisOrigen</td>
+                    <td>@migrante.Email</td>
+                    <td>@migrante.Direccion</td>
+                    <td>@migrante.Telefono</td>
+                    <td>@migrante.Ciudad</td>
+                        @* <td>@migrante.SituacionLaboral</td> *@
+                    <td>
+                        <a class="btn btn-primary table-btn" asp-page="./DetallesMigrante" asp-route-idMigrante="@migrante.Id">
+                            <i class="bi bi-info-circle" aria-hidden="true"></i>
+                            Detalle
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-secondary table-btn" asp-page="./RegistroMigrante"
+                    asp-route-idMigrante="@migrante.Id">
+                            <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                            Editar
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger table-btn" asp-page="./EliminarMigrante" asp-route-idMigrante="@migrante.Id">
+                            <i class="bi bi-trash" aria-hidden="true"></i>
+                            Eliminar
+                        </a>
+                    </td>
+                </tr>
+                }
+            }
+
+
+        </tr>
+    </tbody>
+</table>
+
+<a class="btn btn-primary table-btn" asp-page="./Migrante">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Volver
+</a>

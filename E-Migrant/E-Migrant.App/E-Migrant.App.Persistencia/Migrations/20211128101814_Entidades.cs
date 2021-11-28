@@ -45,11 +45,19 @@ namespace E_Migrant.App.Persistencia.Migrations
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Ciudad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SituacionLaboral = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    SituacionLaboral = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Relacion = table.Column<int>(type: "int", nullable: false),
+                    MigranteId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Migrante", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Migrante_Migrante_MigranteId",
+                        column: x => x.MigranteId,
+                        principalTable: "Migrante",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -104,7 +112,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    tipoServicio = table.Column<int>(type: "int", nullable: false),
+                    NombreServicio = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EntidadId = table.Column<int>(type: "int", nullable: true),
                     Cupo = table.Column<int>(type: "int", nullable: false),
                     FechaInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -199,6 +207,11 @@ namespace E_Migrant.App.Persistencia.Migrations
                 name: "IX_Mensaje_ReceptorId",
                 table: "Mensaje",
                 column: "ReceptorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Migrante_MigranteId",
+                table: "Migrante",
+                column: "MigranteId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Servicio_EntidadId",

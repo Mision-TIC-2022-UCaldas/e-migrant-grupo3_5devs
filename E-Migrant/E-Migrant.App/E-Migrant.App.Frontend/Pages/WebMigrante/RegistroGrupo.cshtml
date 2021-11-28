@@ -1,0 +1,26 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades
+@model E_Migrant.App.Frontend.Pages.RegistroGrupoModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="migrante.Id">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>@Model.migrante.Nombre</p>
+            </div>
+            <div class="col">
+                <label for="inputState">Tipo de relación</label>
+                <select asp-for="migrante.Relacion" asp-items="Html.GetEnumSelectList<Relacion>()"
+                    class="form-control">
+                </select>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar</button>
+</form>
+<a class="btn btn-primary table-btn" asp-page="./Migrante">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Volver
+</a>

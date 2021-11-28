@@ -21,6 +21,16 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         {
             _appContext=appContext;
         }
+
+        Migrante IRepositorioMigrante.SearchFilter(string searchString)
+        {
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                return _appContext.Migrante.FirstOrDefault(m => m.NumeroDocumento == searchString);
+            }
+            return null;
+        }
+
         Migrante IRepositorioMigrante.AddMigrante(Migrante migrante)
         {
             var nitEncontrado = _appContext.Migrante.FirstOrDefault(m=>m.NumeroDocumento == migrante.NumeroDocumento);
@@ -69,6 +79,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
                 migranteEncontrado.Direccion = migrante.Direccion;
                 migranteEncontrado.Ciudad = migrante.Ciudad;
                 migranteEncontrado.SituacionLaboral = migrante.SituacionLaboral;
+                migranteEncontrado.Relacion = migrante.Relacion;
                 
                 _appContext.SaveChanges();
             }

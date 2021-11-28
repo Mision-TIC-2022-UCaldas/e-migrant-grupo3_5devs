@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace E_Migrant.App.Dominio.Entidades
@@ -25,13 +26,15 @@ namespace E_Migrant.App.Dominio.Entidades
         public string Ciudad {get;set;}
         public string SituacionLaboral {get;set;}
 
+        public Relacion Relacion {get; set;}
         //Relaciones 
+        public System.Collections.Generic.List<Migrante> GrupoSocial { get; set; }
+        //public ICollection<Migrante> Familiares { get; set; }
         //Enmigrante solicita servicio
         //public SolicitudSerivicio solicitudServicio {get;set;}
         //Familiares y Amigos
         //public System.Collections.Generic.List<Migrante> Amigos { get; set; }
         //public System.Collections.Generic.List<Migrante> Familiares { get; set; }
         //public System.Collections.Generic.List<string> Necesidades { get; set; }
-
     }
 }

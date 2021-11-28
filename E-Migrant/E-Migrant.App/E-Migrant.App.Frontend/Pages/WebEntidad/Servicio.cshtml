@@ -1,0 +1,53 @@
+﻿@page
+@model E_Migrant.App.Frontend.Pages.ServicioModel
+@{
+}
+<h2>Listado de servicios</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre del servicio</th>
+            <th>Cupo</th>
+            <th>Fecha de inicio</th>
+            <th>Fecha de cierre</th>
+            <th>Estado del servicio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var servicio in Model.servicios)
+            {
+            <tr>
+                <td>@servicio.NombreServicio</td>
+                <td>@servicio.Cupo</td>
+                <td>@servicio.FechaInicio</td>
+                <td>@servicio.FechaFinal</td>
+                <td>@servicio.EstadoServicio</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./Detallesservicio" asp-route-idServicio="@servicio.Id">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        Detalle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistrarServicio"
+                    asp-route-idServicio="@servicio.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./Eliminarservicio" asp-route-idServicio="@servicio.Id">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            }
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary table-btn" asp-page="./Entidad">
+    <i class="bi bi-trash" aria-hidden="true"></i>
+    Volver
+</a>

@@ -10,23 +10,23 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20211127201817_Entidades")]
+    [Migration("20211128101814_Entidades")]
     partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("ProductVersion", "5.0.9")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Entidad", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Ciudad")
                         .IsRequired()
@@ -73,7 +73,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Contenido")
                         .HasColumnType("nvarchar(max)");
@@ -101,7 +101,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Apellidos")
                         .IsRequired()
@@ -119,6 +119,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("MigranteId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -131,6 +134,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Relacion")
+                        .HasColumnType("int");
+
                     b.Property<string>("SituacionLaboral")
                         .HasColumnType("nvarchar(max)");
 
@@ -142,6 +148,8 @@ namespace E_Migrant.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MigranteId");
+
                     b.ToTable("Migrante");
                 });
 
@@ -150,7 +158,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -172,7 +180,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("Cupo")
                         .HasColumnType("int");
@@ -189,8 +197,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaInicio")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("tipoServicio")
-                        .HasColumnType("int");
+                    b.Property<string>("NombreServicio")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -204,7 +213,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
@@ -231,7 +240,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("ComportamientoMigrante")
                         .HasColumnType("int");
@@ -279,7 +288,7 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Username")
                         .HasColumnType("nvarchar(max)");
@@ -305,6 +314,13 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Navigation("Emisor");
 
                     b.Navigation("Receptor");
+                });
+
+            modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Migrante", b =>
+                {
+                    b.HasOne("E_Migrant.App.Dominio.Entidades.Migrante", null)
+                        .WithMany("GrupoSocial")
+                        .HasForeignKey("MigranteId");
                 });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Servicio", b =>
@@ -335,6 +351,11 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Navigation("migrante");
 
                     b.Navigation("Servicio");
+                });
+
+            modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Migrante", b =>
+                {
+                    b.Navigation("GrupoSocial");
                 });
 #pragma warning restore 612, 618
         }

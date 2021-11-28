@@ -1,0 +1,48 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades
+@model E_Migrant.App.Frontend.Pages.RegistrarServicioModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="servicio.Id">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Nombre del servicio</label>
+                <input asp-for="servicio.NombreServicio"   class="form-control" placeholder="Nombre del servicio">
+                <span class="text-danger" asp-validation-for="servicio.NombreServicio"></span>
+            </div>
+            <div class="col">
+                <label for="inputState">Cupo</label>
+                <input asp-for="servicio.Cupo" type="number" class="form-control">
+                <span class="text-danger" asp-validation-for="servicio.Cupo"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputState">Fecha de inicio</label>
+                <input asp-for="servicio.FechaInicio" type="date" class="form-control">
+                <span class="text-danger" asp-validation-for="servicio.FechaInicio"></span>
+            </div>
+            <div class="col">
+                <label for="inputState">Fecha de cierre</label>
+                <input asp-for="servicio.FechaFinal" type="date" class="form-control">
+                <span class="text-danger" asp-validation-for="servicio.FechaFinal"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Estado del servicio</label>
+                <select asp-for="servicio.EstadoServicio" asp-items="Html.GetEnumSelectList<EstadoServicio>()" class="form-control">
+                </select>
+                <span class="text-danger" asp-validation-for="servicio.EstadoServicio"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Crear</button>
+    </div>
+
+</form>
+<a class="btn btn-primary table-btn" asp-page="./Servicio">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Volver
+</a>
