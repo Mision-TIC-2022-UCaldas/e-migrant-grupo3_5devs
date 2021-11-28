@@ -14492,6 +14492,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\USUARIO\\Desktop\\Repositorios\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebEntidad\\ListaEntidad.cshtml",
+      "TargetPath": "Pages\\WebEntidad\\ListaEntidad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\USUARIO\\Desktop\\Repositorios\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"

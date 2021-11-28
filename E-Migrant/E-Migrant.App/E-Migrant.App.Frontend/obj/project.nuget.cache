@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3NsGMSLXZ0IwgP4i5xnPd6kOu2BRssYh2UidhyybOHD85n4+9SJXIpb96lrVy0B/oiRYOUeu0VqlfdfZdlWkFQ==",
+  "dgSpecHash": "3hQOvHbdBtJk9tRqGLJSrO2Wb49XP9d4mx7VEVfvajHmvDRdFq2p/RaHP9smXNlM9Vizy2o8kcfSuslN8QTR7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Repositorios\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\E-Migrant.App.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.14\\microsoft.aspnetcore.authentication.google.3.1.14.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.9\\microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.9\\microsoft.aspnetcore.cryptography.keyderivation.5.0.9.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
@@ -169,5 +170,12 @@
     "C:\\Users\\USUARIO\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\USUARIO\\Desktop\\Repositorios\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

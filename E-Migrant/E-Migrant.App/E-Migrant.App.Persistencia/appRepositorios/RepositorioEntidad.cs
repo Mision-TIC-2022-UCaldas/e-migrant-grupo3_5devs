@@ -21,6 +21,16 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         {
             _appContext=appContext;
         }
+
+        public Entidad SearchFilter(string searchString)
+        {
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                return _appContext.Entidad.FirstOrDefault(m => m.RazonSocial == searchString);
+            }
+            return null;
+        }
+
         Entidad IRepositorioEntidad.AddEntidad(Entidad entidad)
         {
             var nitEncontrado = _appContext.Entidad.FirstOrDefault(m=>m.Nit == entidad.Nit);

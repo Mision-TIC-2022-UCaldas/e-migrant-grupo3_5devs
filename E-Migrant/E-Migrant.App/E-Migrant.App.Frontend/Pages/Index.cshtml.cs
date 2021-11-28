@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Authorization;
+using E_Migrant.App.Frontend.Areas.Identity.Data;
 
 namespace E_Migrant.App.Frontend.Pages
 {

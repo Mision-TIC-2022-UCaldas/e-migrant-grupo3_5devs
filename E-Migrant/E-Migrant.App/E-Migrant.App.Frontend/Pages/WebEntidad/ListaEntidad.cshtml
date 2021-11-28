@@ -1,0 +1,104 @@
+﻿@page
+@model E_Migrant.App.Frontend.Pages.ListaEntidadModel
+@{
+}
+<h2>Listado de entidades</h2>
+<form asp-page="./ListaEntidad" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por razón social:
+            <input type="text" asp-for="@Model.buscar">
+            <input type="submit" value="Buscar" class="btn btn-primary" />
+        </p>
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Razón Social</th>
+            <th>Nit</th>
+            <th>Dirección</th>
+            <th>Ciudad</th>
+            <th>Telefono</th>
+            <th>Correo electronico</th>
+            <th>Pagina web</th>
+            <th>Sector</th>
+            <th>Tipo de servicio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @if (Model.encontradoEntidad != null)
+            {
+            <tr>
+                <td>@Model.encontradoEntidad.RazonSocial</td>
+                <td>@Model.encontradoEntidad.Nit</td>
+                <td>@Model.encontradoEntidad.Direccion</td>
+                <td>@Model.encontradoEntidad.Ciudad</td>
+                <td>@Model.encontradoEntidad.Telefono</td>
+                <td>@Model.encontradoEntidad.Email</td>
+                <td>@Model.encontradoEntidad.PaginaWeb</td>
+                <td>@Model.encontradoEntidad.Sector</td>
+                <td>@Model.encontradoEntidad.TipoServicio</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesEntidad" asp-route-idEntidad="@Model.encontradoEntidad.Id">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        Detalle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroEntidad" asp-route-idEntidad="@Model.encontradoEntidad.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./EliminarEntidad" asp-route-idEntidad="@Model.encontradoEntidad.Id">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+        else if (Model.encontradoEntidad == null)
+        {
+            @foreach (var entidad in Model.Entidads)
+            {
+            <tr>
+                <td>@entidad.RazonSocial</td>
+                <td>@entidad.Nit</td>
+                <td>@entidad.Direccion</td>
+                <td>@entidad.Ciudad</td>
+                <td>@entidad.Telefono</td>
+                <td>@entidad.Email</td>
+                <td>@entidad.PaginaWeb</td>
+                <td>@entidad.Sector</td>
+                <td>@entidad.TipoServicio</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesEntidad" asp-route-idEntidad="@entidad.Id">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        Detalle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroEntidad" asp-route-idEntidad="@entidad.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./EliminarEntidad" asp-route-idEntidad="@entidad.Id">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            }
+        }
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary table-btn" asp-page="./Entidad">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Volver
+</a>

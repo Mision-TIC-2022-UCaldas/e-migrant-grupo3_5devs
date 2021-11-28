@@ -19,5 +19,8 @@ namespace E_Migrant.App.Persistencia.appRepositorios
 
         // ver
         Entidad GetEntidad(int idEntidad);
+        
+        //Busqueda por filtro
+        Entidad SearchFilter(String searchString);
     }
 }

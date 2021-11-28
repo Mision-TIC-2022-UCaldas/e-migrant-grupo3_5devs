@@ -6,9 +6,11 @@ using E_Migrant.App.Dominio.Entidades;
 using E_Migrant.App.Persistencia.appRepositorios;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Authorization;
 
 namespace E_Migrant.App.Frontend.Pages
 {
+    [Authorize]
     public class MigranteModel : PageModel
     {
         private readonly IRepositorioMigrante _repositorioMigrante = new RepositorioMigrante(new appContext());
