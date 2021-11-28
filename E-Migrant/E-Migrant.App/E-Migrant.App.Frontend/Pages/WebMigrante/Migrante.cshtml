@@ -34,9 +34,9 @@
                 <td>@migrante.Ciudad</td>
                 @* <td>@migrante.SituacionLaboral</td> *@
                 <td>
-                    <a class="btn btn-primary table-btn" asp-page="./DetallesMigrante" asp-route-idMigrante="@migrante.Id">
+                    <a class="btn btn-primary table-btn" asp-page="./RegistroNecesidad" asp-route-idMigrante="@migrante.Id">
                         <i class="bi bi-info-circle" aria-hidden="true"></i>
-                        Detalle
+                        Añadir servicio
                     </a>
                 </td>
                 <td>
@@ -51,6 +51,12 @@
                         añadir a grupo social
                     </a>
                 </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./ListaMigrante" asp-route-idMigrante="@migrante.Id">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                        Crear grupo
+                    </a>
+                </td>
             </tr>
             }
         </tr>
@@ -59,14 +65,4 @@
 <a class="btn btn-primary table-btn" asp-page="./RegistroMigrante">
     <i class="bi bi-file-plus" aria-hidden="true"></i>
     Crear Migrante
-</a>
-
-<a class="btn btn-primary table-btn" asp-page="./ListaMigrante">
-    <i class="bi bi-file-plus" aria-hidden="true"></i>
-    Crear grupo
-</a>
-
-<a class="btn btn-primary table-btn" asp-page="./RegistroNecesidad">
-    <i class="bi bi-file-plus" aria-hidden="true"></i>
-    Crear Necesidad
 </a>

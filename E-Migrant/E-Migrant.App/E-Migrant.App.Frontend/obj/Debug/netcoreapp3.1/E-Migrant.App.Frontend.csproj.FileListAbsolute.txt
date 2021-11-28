@@ -563,3 +563,4 @@ C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Fron
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\E-Migrant.App.Frontend.pdb
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\E-Migrant.App.Frontend.genruntimeconfig.cache
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\RegistroNecesidad.cshtml.g.cs
+C:\Users\USUARIO\Desktop\Repositorios\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\RegistroNecesidad.cshtml.g.cs

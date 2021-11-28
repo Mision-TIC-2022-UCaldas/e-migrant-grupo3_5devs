@@ -8,10 +8,10 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <p>@Model.migrante.Nombre</p>
+                <h3>@Model.migrante.Nombre</h3>
             </div>
             <div class="col">
-                <label for="inputState">Tipo de relación</label>
+                <label for="inputState">Relacion</label>
                 <select asp-for="migrante.Relacion" asp-items="Html.GetEnumSelectList<Relacion>()"
                     class="form-control">
                 </select>

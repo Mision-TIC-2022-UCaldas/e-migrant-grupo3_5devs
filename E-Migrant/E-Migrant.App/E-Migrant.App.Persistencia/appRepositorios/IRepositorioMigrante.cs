@@ -22,5 +22,8 @@ namespace E_Migrant.App.Persistencia.appRepositorios
 
         // Busqueda por Filtro
         Migrante SearchFilter(String searchString);
+
+        // Añadir relacion
+        void addRelacion(int idMigrante);
     }
 }

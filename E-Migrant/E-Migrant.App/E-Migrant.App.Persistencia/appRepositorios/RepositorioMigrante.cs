@@ -85,5 +85,17 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             }
             return migranteEncontrado;
         }
+
+        void IRepositorioMigrante.addRelacion(int idMigrante)
+        {
+            var migrante = _appContext.Migrante.Find(idMigrante);
+            if (migrante != null)
+            {
+                if (!migrante.Relacion.Equals("Ninguna"))
+                {
+                    migrante.GrupoSocial.Add(migrante);
+                }
+            }
+        }
     }
 }
