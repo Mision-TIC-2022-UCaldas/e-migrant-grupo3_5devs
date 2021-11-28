@@ -7,6 +7,5 @@ namespace E_Migrant.App.Dominio.Entidades
         Cerrados,
         ConCupo,
         SinCupo
-
     }
 }
