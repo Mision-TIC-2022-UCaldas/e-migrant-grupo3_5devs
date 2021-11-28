@@ -79,6 +79,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
                 migranteEncontrado.Direccion = migrante.Direccion;
                 migranteEncontrado.Ciudad = migrante.Ciudad;
                 migranteEncontrado.SituacionLaboral = migrante.SituacionLaboral;
+                migranteEncontrado.Relacion = migrante.Relacion;
                 
                 _appContext.SaveChanges();
             }
