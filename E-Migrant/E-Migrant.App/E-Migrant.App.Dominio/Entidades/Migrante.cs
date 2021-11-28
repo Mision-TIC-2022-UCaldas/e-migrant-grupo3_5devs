@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace E_Migrant.App.Dominio.Entidades
@@ -26,12 +27,12 @@ namespace E_Migrant.App.Dominio.Entidades
         public string SituacionLaboral {get;set;}
 
         //Relaciones 
+        public ICollection<Migrante> Migrantes { get; set; }
         //Enmigrante solicita servicio
         //public SolicitudSerivicio solicitudServicio {get;set;}
         //Familiares y Amigos
         //public System.Collections.Generic.List<Migrante> Amigos { get; set; }
         //public System.Collections.Generic.List<Migrante> Familiares { get; set; }
         //public System.Collections.Generic.List<string> Necesidades { get; set; }
-
     }
 }

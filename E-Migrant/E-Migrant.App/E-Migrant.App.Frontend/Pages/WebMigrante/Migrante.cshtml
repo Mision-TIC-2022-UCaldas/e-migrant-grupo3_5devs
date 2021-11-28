@@ -9,6 +9,7 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Tipo de documento</th>
+            <th>Numero de documento</th>
             <th>País de origen</th>
             <th>Correo electronico</th>
             <th>Direccion</th>
@@ -25,6 +26,7 @@
                 <td>@migrante.Nombre</td>
                 <td>@migrante.Apellidos</td>
                 <td>@migrante.tipoDocumento</td>
+                <td>@migrante.NumeroDocumento</td>
                 <td>@migrante.PaisOrigen</td>
                 <td>@migrante.Email</td>
                 <td>@migrante.Direccion</td>
@@ -57,4 +59,9 @@
 <a class="btn btn-primary table-btn" asp-page="./RegistroMigrante">
     <i class="bi bi-file-plus" aria-hidden="true"></i>
     Crear Migrante
+</a>
+
+<a class="btn btn-primary table-btn" asp-page="./ListaMigrante">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Crear grupo
 </a>
