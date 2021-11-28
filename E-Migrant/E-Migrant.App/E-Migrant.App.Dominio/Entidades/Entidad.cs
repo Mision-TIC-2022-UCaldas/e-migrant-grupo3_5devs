@@ -23,6 +23,6 @@ namespace E_Migrant.App.Dominio.Entidades
         public string Email {get;set;}
         public string PaginaWeb {get;set;}
         public EvaluacionServicio evaluacionGerencia {get;set;}
-
+        public System.Collections.Generic.List<Servicio> ServiciosOfrecidos { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace E_Migrant.App.Dominio.Entidades
         public DateTime FechaFinal {get;set;}
         [Required (ErrorMessage = "El estado es obligatorio.")]
         public EstadoServicio EstadoServicio {get;set;}
+        public bool Activo {get;set;}
 
         //Evaluaciones
         //public System.Collections.Generic.List<EvaluacionServicio> Evaluaciones { get; set; }

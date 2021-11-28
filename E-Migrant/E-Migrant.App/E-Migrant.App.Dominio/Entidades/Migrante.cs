@@ -29,6 +29,7 @@ namespace E_Migrant.App.Dominio.Entidades
         public Relacion Relacion {get; set;}
         //Relaciones 
         public System.Collections.Generic.List<Migrante> GrupoSocial { get; set; }
+        
         //public ICollection<Migrante> Familiares { get; set; }
         //Enmigrante solicita servicio
         //public SolicitudSerivicio solicitudServicio {get;set;}
