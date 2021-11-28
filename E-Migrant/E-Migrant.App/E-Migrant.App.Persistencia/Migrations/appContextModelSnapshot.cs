@@ -132,6 +132,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Relacion")
+                        .HasColumnType("int");
+
                     b.Property<string>("SituacionLaboral")
                         .HasColumnType("nvarchar(max)");
 
@@ -192,8 +195,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaInicio")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("tipoServicio")
-                        .HasColumnType("int");
+                    b.Property<string>("NombreServicio")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -313,7 +317,7 @@ namespace E_Migrant.App.Persistencia.Migrations
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Migrante", b =>
                 {
                     b.HasOne("E_Migrant.App.Dominio.Entidades.Migrante", null)
-                        .WithMany("Migrantes")
+                        .WithMany("GrupoSocial")
                         .HasForeignKey("MigranteId");
                 });
 
@@ -349,7 +353,7 @@ namespace E_Migrant.App.Persistencia.Migrations
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Migrante", b =>
                 {
-                    b.Navigation("Migrantes");
+                    b.Navigation("GrupoSocial");
                 });
 #pragma warning restore 612, 618
         }

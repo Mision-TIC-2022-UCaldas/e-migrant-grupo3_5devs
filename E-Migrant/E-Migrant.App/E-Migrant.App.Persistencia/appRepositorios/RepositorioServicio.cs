@@ -53,7 +53,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             var servicioEncontrado = _appContext.Servicio.FirstOrDefault(m=>m.Id == servicio.Id);
             if (servicioEncontrado!=null)
             {
-                servicioEncontrado.tipoServicio = servicio.tipoServicio;
+                servicioEncontrado.NombreServicio = servicio.NombreServicio;
                 servicioEncontrado.Entidad = servicio.Entidad;
                 servicioEncontrado.Cupo = servicio.Cupo;
                 servicioEncontrado.FechaInicio = servicio.FechaInicio;
