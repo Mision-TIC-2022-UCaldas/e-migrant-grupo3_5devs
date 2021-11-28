@@ -27,3 +27,4 @@ namespace E_Migrant.App.Frontend
 
 //dotnet ef migrations add IdentityInitial --context IdentityDataContext
 //dotnet ef database update --context IdentityDataContext
+//dotnet new page -n PanelControlEntidad -na E-Migrant.App.Frontend.Pages -o .\Pages\WebEntidad\Usuario

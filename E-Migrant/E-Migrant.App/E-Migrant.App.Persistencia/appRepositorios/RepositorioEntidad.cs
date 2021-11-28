@@ -30,6 +30,14 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             }
             return null;
         }
+        public Entidad SearchEmail(string email)
+        {
+            if (!String.IsNullOrEmpty(email))
+            {
+                return _appContext.Entidad.FirstOrDefault(m => m.Email == email);
+            }
+            return null;
+        }
 
         Entidad IRepositorioEntidad.AddEntidad(Entidad entidad)
         {

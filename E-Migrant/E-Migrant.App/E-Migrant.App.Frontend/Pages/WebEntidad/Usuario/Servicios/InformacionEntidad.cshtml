@@ -1,0 +1,70 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades
+@model E_Migrant.App.Frontend.Pages.InformacionEntidadModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="entidad.Id">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Razón social</label>
+                <input asp-for="entidad.RazonSocial" type="text" class="form-control" placeholder="Razón social">
+                <span class="text-danger" asp-validation-for="entidad.RazonSocial"></span>
+            </div>
+            <div class="col">
+                <label for="inputState">Nit</label>
+                <input asp-for="entidad.Nit" type="text" class="form-control" placeholder="Nit">
+                <span class="text-danger" asp-validation-for="entidad.Nit"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputState">Tipo Servicio:</label>
+                <select asp-for="entidad.TipoServicio" asp-items="Html.GetEnumSelectList<TipoServicio>()"
+                    class="form-control">
+                </select>
+                <span class="text-danger" asp-validation-for="entidad.TipoServicio"></span>
+            </div>
+            <div class="col">
+                <label for="inputState">Página web</label>
+                <input asp-for="entidad.PaginaWeb" type="text" class="form-control" placeholder="Url pagina web">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Sector</label>
+                <select asp-for="entidad.Sector" asp-items="Html.GetEnumSelectList<Sector>()"
+                    class="form-control">
+                </select>
+                <span class="text-danger" asp-validation-for="entidad.Sector"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="entidad.Email"></label>
+                <input asp-for="entidad.Email" class="form-control" value="@Model.usuario" readonly>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Telefono</label>
+                <input asp-for="entidad.Telefono" type="text" class="form-control" placeholder="Telefono">
+                <span class="text-danger" asp-validation-for="entidad.Telefono"></span>
+            </div>
+            <div class="col">
+                <label for="inputState">Ciudad</label>
+                <input asp-for="entidad.Ciudad" type="text" class="form-control" placeholder="Ciudad">
+                <span class="text-danger" asp-validation-for="entidad.Ciudad"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="inputState">Direccion</label>
+                <input asp-for="entidad.Direccion" type="text" class="form-control" placeholder="Direccion">
+                <span class="text-danger" asp-validation-for="entidad.Direccion"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+
+</form>

@@ -22,5 +22,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         
         //Busqueda por filtro
         Entidad SearchFilter(String searchString);
+        //Busqueda por correo
+        Entidad SearchEmail(string email);
     }
 }
