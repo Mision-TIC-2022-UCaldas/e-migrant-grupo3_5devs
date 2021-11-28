@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zHDn/zjM8ua7s6QmsT+skk9Sd1j3WOlkhG4BBbwLyLUCJbe0CshMj9dViFoNQ9l/R/AHWC8S1mIm3Lx9AfPGcw==",
+  "dgSpecHash": "r0wzNFPRtaNduMiLA3gq58kBAcs0WsecrKI/ct0jTwhuwMf5GZT1/8BpPFZ8Dj55Yzu70DpvdT7NdLONV/vxyA==",
   "success": true,
   "projectFilePath": "C:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\E-Migrant.App.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leand\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\leand\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.14\\microsoft.aspnetcore.authentication.google.3.1.14.nupkg.sha512",
     "C:\\Users\\leand\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.9\\microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",
     "C:\\Users\\leand\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.9\\microsoft.aspnetcore.cryptography.keyderivation.5.0.9.nupkg.sha512",
     "C:\\Users\\leand\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

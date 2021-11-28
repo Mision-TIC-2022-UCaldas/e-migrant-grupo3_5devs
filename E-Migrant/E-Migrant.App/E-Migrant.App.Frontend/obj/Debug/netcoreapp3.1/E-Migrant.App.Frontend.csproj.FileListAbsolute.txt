@@ -266,3 +266,4 @@ C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebGerencia\Gerencia.cshtml.g.cs
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebGerencia\RegistroNovedad.cshtml.g.cs
+C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll

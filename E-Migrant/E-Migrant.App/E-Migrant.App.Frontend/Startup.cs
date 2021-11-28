@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using E_Migrant.App.Persistencia.appRepositorios;
-
+using Microsoft.AspNetCore.Authentication.Google;
 
 namespace E_Migrant.App.Frontend
 {
@@ -32,6 +32,15 @@ namespace E_Migrant.App.Frontend
             services.AddRazorPages();
             services.AddControllersWithViews();
             //services.AddSingleton<IRepositorioNovedad, RepositorioNovedad>();
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                IConfigurationSection googleAuthNSection =
+                Configuration.GetSection("Authentication:Google");
+
+                options.ClientId = "762520957125-ql5tn7h0gprsqqgo60eqch3grqdftabq.apps.googleusercontent.com";
+                options.ClientSecret = "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";
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
