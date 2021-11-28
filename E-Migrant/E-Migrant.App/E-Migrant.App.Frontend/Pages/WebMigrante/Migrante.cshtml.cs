@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace E_Migrant.App.Frontend.Pages
 {
-    [Authorize]
+    //[Authorize]
     public class MigranteModel : PageModel
     {
         private readonly IRepositorioMigrante _repositorioMigrante = new RepositorioMigrante(new appContext());

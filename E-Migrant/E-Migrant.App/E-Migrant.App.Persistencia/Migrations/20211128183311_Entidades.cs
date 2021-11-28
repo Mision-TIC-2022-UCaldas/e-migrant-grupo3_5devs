@@ -61,6 +61,21 @@ namespace E_Migrant.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Necesidad",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Categorias = table.Column<int>(type: "int", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NivelPrioridad = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Necesidad", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Novedad",
                 columns: table => new
                 {
@@ -238,6 +253,9 @@ namespace E_Migrant.App.Persistencia.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Mensaje");
+
+            migrationBuilder.DropTable(
+                name: "Necesidad");
 
             migrationBuilder.DropTable(
                 name: "Novedad");
