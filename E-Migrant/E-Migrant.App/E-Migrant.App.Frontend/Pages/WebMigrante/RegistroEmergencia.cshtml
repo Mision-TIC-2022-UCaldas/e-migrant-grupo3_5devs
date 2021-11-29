@@ -1,0 +1,43 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades
+@model E_Migrant.App.Frontend.Pages.RegistroEmergenciaModel
+@{
+}
+<h1>Registrar Emergencia</h1>
+<form method="post">
+    <input type="hidden" asp-for="emergencia.Id">
+    <div class="container">
+        <div class="form-group col-md-6">
+            <label for="inputState">Tipo de emergencia:</label>
+            <select asp-for="emergencia.TipoEmergencia" placeholder="Tipo de emergencia"
+                asp-items="Html.GetEnumSelectList<TipoEmergencia>()" class="form-control">
+                <option value=""></option>
+            </select>
+            <span class="text-danger" asp-validation-for="emergencia.TipoEmergencia"></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col">
+            <label for="inputState">Descripcion</label>
+            <input asp-for="emergencia.Descripcion" type="text" class="form-control" placeholder="Describa su emergencia">
+            <span class="text-danger" asp-validation-for="emergencia.Descripcion"></span>
+        </div>
+    </div>
+    <p>
+
+    </p>
+    <div class="form-group col-md-6">
+        <button type="submit" class="btn btn-primary">Crear</button>
+    </div>
+
+</form>
+
+<a class="btn btn-primary table-btn" asp-page="./ConsultarEmergencia">
+            <i class="bi bi-file-plus" aria-hidden="true"></i>
+            Emergencias
+        </a>
+
+        <a class="btn btn-primary table-btn" asp-page="./Migrante">
+            <i class="bi bi-file-plus" aria-hidden="true"></i>
+            Volver
+        </a>

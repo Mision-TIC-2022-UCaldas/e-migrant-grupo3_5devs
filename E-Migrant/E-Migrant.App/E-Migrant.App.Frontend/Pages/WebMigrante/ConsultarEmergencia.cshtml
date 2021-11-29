@@ -1,0 +1,40 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades;
+@model E_Migrant.App.Frontend.Pages.ConsultarEmergenciaModel
+@{
+}
+<h1>Emergencias</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tipo de emergencia</th>
+            <th>descripcion</th>
+            <th>estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var emergencia in Model.Emergencia)
+            {
+            <tr>
+                <td>@emergencia.TipoEmergencia</td>
+                <td>@emergencia.Descripcion</td>
+                <td>@emergencia.EstadoEmergencia</td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroEmergencia2"
+                    asp-route-idEmergencia="@emergencia.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+            </tr>
+            }
+        </tr>
+    </tbody>
+</table>
+
+<a class="btn btn-primary table-btn"  asp-page="./Migrante">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Volver
+</a>

@@ -15,10 +15,10 @@ namespace E_Migrant.App.Frontend.Pages
         public string buscar { set; get; }
         public Entidad encontradoEntidad { set; get; }
         public IEnumerable<Entidad> Entidads { get; set; }
-        public IActionResult OnGet(string? buscar)
+        public IActionResult OnGet(string buscar)
         {
             Entidads = _repositorioEntidad.GetAllEntidad();
-            encontradoEntidad = _repositorioEntidad.SearchFilter(buscar);
+            encontradoEntidad = _repositorioEntidad.SearchNit(buscar);
             return Page();
         }
         

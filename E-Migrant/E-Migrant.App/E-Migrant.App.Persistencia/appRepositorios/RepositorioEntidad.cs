@@ -41,6 +41,18 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             return null;
         }
 
+        public Entidad SearchNit(string nit)
+        {
+            if (!String.IsNullOrEmpty(nit))
+            {
+                //_appContext.Servicio.Include
+                return _appContext.Entidad.FirstOrDefault(m => m.Nit == nit);
+            }
+            return null;
+        }
+
+
+
         Entidad IRepositorioEntidad.AddEntidad(Entidad entidad)
         {
             var nitEncontrado = _appContext.Entidad.FirstOrDefault(m => m.Nit == entidad.Nit);

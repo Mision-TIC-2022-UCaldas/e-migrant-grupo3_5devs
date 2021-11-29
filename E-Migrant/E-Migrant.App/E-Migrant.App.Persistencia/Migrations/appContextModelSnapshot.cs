@@ -19,6 +19,27 @@ namespace E_Migrant.App.Persistencia.Migrations
                 .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Emergencia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EstadoEmergencia")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TipoEmergencia")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Emergencia");
+                });
+
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Entidad", b =>
                 {
                     b.Property<int>("Id")

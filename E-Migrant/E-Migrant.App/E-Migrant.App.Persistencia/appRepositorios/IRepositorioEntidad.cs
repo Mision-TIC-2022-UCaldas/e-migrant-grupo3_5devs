@@ -24,6 +24,8 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         Entidad SearchFilter(String searchString);
         //Busqueda por correo
         Entidad SearchEmail(string email);
+
+        Entidad SearchNit(string nit);
         void AddServicio(int idEntidad, Servicio servicio);
         List<Entidad> GetServicios(int idEntidad);
     }

@@ -14412,8 +14412,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\stive\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebMigrante\\ConsultarEmergencia.cshtml",
+      "TargetPath": "Pages\\WebMigrante\\ConsultarEmergencia.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\stive\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\stive\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebMigrante\\RegistroEmergencia2.cshtml",
+      "TargetPath": "Pages\\WebMigrante\\RegistroEmergencia2.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14562,6 +14572,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\stive\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebMigrante\\ConsultarNovedad.cshtml",
+      "TargetPath": "Pages\\WebMigrante\\ConsultarNovedad.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\stive\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -14569,6 +14584,11 @@
     {
       "FilePath": "c:\\Users\\stive\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebMigrante\\ListaMigrante.cshtml",
       "TargetPath": "Pages\\WebMigrante\\ListaMigrante.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\stive\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebMigrante\\RegistroEmergencia.cshtml",
+      "TargetPath": "Pages\\WebMigrante\\RegistroEmergencia.cshtml",
       "FileKind": "mvc"
     },
     {

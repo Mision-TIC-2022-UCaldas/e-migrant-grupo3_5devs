@@ -6,7 +6,7 @@
 <form asp-page="./ListaEntidad" method="get">
     <div class="form-actions no-color">
         <p>
-            Buscar por razón social:
+            Buscar por razón nit:
             <input type="text" asp-for="@Model.buscar">
             <input type="submit" value="Buscar" class="btn btn-primary" />
         </p>
@@ -41,60 +41,28 @@
                 <td>@Model.encontradoEntidad.Sector</td>
                 <td>@Model.encontradoEntidad.TipoServicio</td>
                 <td>
-                    <a class="btn btn-primary table-btn" asp-page="./DetallesEntidad" asp-route-idEntidad="@Model.encontradoEntidad.Id">
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesEntidad"
+                    asp-route-idEntidad="@Model.encontradoEntidad.Id">
                         <i class="bi bi-info-circle" aria-hidden="true"></i>
                         Detalle
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-secondary table-btn" asp-page="./RegistroEntidad" asp-route-idEntidad="@Model.encontradoEntidad.Id">
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroEntidad"
+                    asp-route-idEntidad="@Model.encontradoEntidad.Id">
                         <i class="bi bi-pencil-square" aria-hidden="true"></i>
                         Editar
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-danger table-btn" asp-page="./EliminarEntidad" asp-route-idEntidad="@Model.encontradoEntidad.Id">
-                        <i class="bi bi-trash" aria-hidden="true"></i>
-                        Eliminar
-                    </a>
-                </td>
-            </tr>
-        }
-        else if (Model.encontradoEntidad == null)
-        {
-            @foreach (var entidad in Model.Entidads)
-            {
-            <tr>
-                <td>@entidad.RazonSocial</td>
-                <td>@entidad.Nit</td>
-                <td>@entidad.Direccion</td>
-                <td>@entidad.Ciudad</td>
-                <td>@entidad.Telefono</td>
-                <td>@entidad.Email</td>
-                <td>@entidad.PaginaWeb</td>
-                <td>@entidad.Sector</td>
-                <td>@entidad.TipoServicio</td>
-                <td>
-                    <a class="btn btn-primary table-btn" asp-page="./DetallesEntidad" asp-route-idEntidad="@entidad.Id">
-                        <i class="bi bi-info-circle" aria-hidden="true"></i>
-                        Detalle
-                    </a>
-                </td>
-                <td>
-                    <a class="btn btn-secondary table-btn" asp-page="./RegistroEntidad" asp-route-idEntidad="@entidad.Id">
-                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
-                        Editar
-                    </a>
-                </td>
-                <td>
-                    <a class="btn btn-danger table-btn" asp-page="./EliminarEntidad" asp-route-idEntidad="@entidad.Id">
+                    <a class="btn btn-danger table-btn" asp-page="./EliminarEntidad"
+                    asp-route-idEntidad="@Model.encontradoEntidad.Id">
                         <i class="bi bi-trash" aria-hidden="true"></i>
                         Eliminar
                     </a>
                 </td>
             </tr>
             }
-        }
         </tr>
     </tbody>
 </table>

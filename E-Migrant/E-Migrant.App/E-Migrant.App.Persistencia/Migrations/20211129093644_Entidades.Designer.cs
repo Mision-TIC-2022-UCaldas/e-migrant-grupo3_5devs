@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20211129003426_Entidades2")]
-    partial class Entidades2
+    [Migration("20211129093644_Entidades")]
+    partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,27 @@ namespace E_Migrant.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Emergencia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EstadoEmergencia")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TipoEmergencia")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Emergencia");
+                });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Entidad", b =>
                 {
@@ -166,6 +187,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EstadoNecesidad")
+                        .HasColumnType("int");
 
                     b.Property<int>("NivelPrioridad")
                         .HasColumnType("int");

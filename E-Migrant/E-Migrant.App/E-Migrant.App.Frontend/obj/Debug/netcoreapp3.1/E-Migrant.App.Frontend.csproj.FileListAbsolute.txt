@@ -390,3 +390,7 @@ C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\
 >>>>>>> c27520557f2f24327edf2bde03725d6850ad3c4f
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebEntidad\Usuario\Servicios\ListaServicios.cshtml.g.cs
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebEntidad\Usuario\Servicios\RegistroServicio.cshtml.g.cs
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\RegistroEmergencia.cshtml.g.cs
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\ConsultarEmergencia.cshtml.g.cs
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\RegistroEmergencia2.cshtml.g.cs
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\ConsultarNovedad.cshtml.g.cs

@@ -5,6 +5,5 @@ namespace E_Migrant.App.Dominio.Entidades
     {
         AtencionMedica,
         AntencionPolicial,
-        Ambos
     }
 }

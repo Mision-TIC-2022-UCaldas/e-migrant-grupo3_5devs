@@ -1,0 +1,33 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades;
+@model E_Migrant.App.Frontend.Pages.ConsultarNovedadModel
+@{
+}
+<h1>Novedades</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Fecha inicio</th>
+            <th>Dias</th>
+            <th>Descripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var novedad in Model.Novedad)
+            {
+            <tr>
+                <td>@novedad.FechaInicio</td>
+                <td>@novedad.DiasNovedad</td>
+                <td>@novedad.Descripcion</td>
+            </tr>
+            }
+        </tr>
+    </tbody>
+</table>
+
+<a class="btn btn-primary table-btn"  asp-page="./Migrante">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Volver
+</a>
