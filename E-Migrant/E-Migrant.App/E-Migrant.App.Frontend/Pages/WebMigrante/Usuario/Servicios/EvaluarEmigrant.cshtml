@@ -5,7 +5,7 @@
 }</h1>
 <h1>Evalúanos</h1>
 
-<form>
+<form method="post">
     ¿Cómo calificas tu experiencia con EMigrant?
     <label asp-for="migrante.evaluacionEMigrant">Selecciona un valor entre 1 y 5 Estrellas:</label>
     <select asp-for="migrante.evaluacionEMigrant" >
@@ -15,5 +15,5 @@
     <option value="4 Estrellas">4 Estrellas</option>
     <option value="5 Estrellas">5 Estrellas</option>
     </select>
-    <button type="submit" asp-page-handler="Filtrar">Enviar</button>
+    <button type="submit" >Enviar</button>
 </form>

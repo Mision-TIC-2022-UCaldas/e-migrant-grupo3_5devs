@@ -19,6 +19,8 @@ namespace E_Migrant.App.Frontend.Pages
         public IActionResult OnGet(int? idMigrante)
         {
             usuario = User.Identity.Name;
+            migrante = _repositorioMigrante.SearchEmail(usuario);
+            
             if (idMigrante.HasValue)
             {
                 migrante = _repositorioMigrante.GetMigrante(idMigrante.Value);
@@ -41,6 +43,7 @@ namespace E_Migrant.App.Frontend.Pages
         {
             if (!ModelState.IsValid)
             {
+                _repositorioMigrante.UpdateMigrante(migrante);
                 return Page();
             }
             else
