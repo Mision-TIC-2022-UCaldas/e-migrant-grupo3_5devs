@@ -6,13 +6,16 @@
 <h2>Listado de servicios disponibles</h2>
 <form>
     Filtra
-    <label asp-for="filtroEstadoServicio">Selecciona el tipo de servicio a consultar:</label>
-    <select asp-for="filtroEstadoServicio" >
-    <option value="Activos">Activos</option>
-    <option value="Cerrados">Cerrados</option>
-    <option value="ConCupo">ConCupo</option>
-    <option value="SinCupo">SinCupo</option>
-    <option value="Cancelado">Cancelado</option>
+    <label asp-for="filtroTipoServicio">Selecciona el tipo de servicio a consultar:</label>
+    <select asp-for="filtroTipoServicio" >
+    <option value="Salud">Salud</option>
+    <option value="Jurídicos">Jurídicos</option>
+    <option value="ComidaPreparada">ComidaPreparada</option>
+    <option value="Empleo">Empleo</option>
+    <option value="AlojamientoTemporal">AlojamientoTemporal</option>
+    <option value="AlojamientoPermanente">AlojamientoPermanente</option>
+    <option value="Educación">Educación</option>
+    <option value="Otros">Otros</option>
     </select>
     <button type="submit" asp-page-handler="Filtrar">Buscar</button>
 </form>
@@ -31,7 +34,9 @@
         <tr>
             @foreach (var servicio in Model.servicios)
             {
-            <tr>
+                if (@Model.filtroTipoServicio!=null){
+                    if(servicio.TipoServicio.ToString() == @Model.filtroTipoServicio){
+                        <tr>
                 <td>@servicio.NombreServicio</td>
                 <td>@servicio.Cupo</td>
                 <td>@servicio.FechaInicio</td>
@@ -44,10 +49,31 @@
                     </a>
                 </td>
             </tr>
+                    }
+                }else{
+<tr>
+                <td>@servicio.NombreServicio</td>
+                <td>@servicio.Cupo</td>
+                <td>@servicio.FechaInicio</td>
+                <td>@servicio.FechaFinal</td>
+                <td>@servicio.EstadoServicio</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./Detallesservicio" asp-route-idServicio="@servicio.Id">
+                        <i class="bi bi-info-circle" aria-hidden="true"></i>
+                        Detalle
+                    </a>
+                </td>
+            </tr>
+                }
+            
             }
         </tr>
     </tbody>
 </table>
+<a class="btn btn-primary table-btn" asp-page="./ServiciosDisponibles">
+    <i class="bi bi-trash" aria-hidden="true"></i>
+    Motrar todos
+</a>
 <a class="btn btn-primary table-btn" asp-page="../PanelControlMigrante">
     <i class="bi bi-trash" aria-hidden="true"></i>
     Volver

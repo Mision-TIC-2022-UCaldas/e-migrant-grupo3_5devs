@@ -12,6 +12,13 @@
                 <input asp-for="servicio.NombreServicio"   class="form-control" placeholder="Nombre del servicio">
                 <span class="text-danger" asp-validation-for="servicio.NombreServicio"></span>
             </div>
+            <div class="form-group col-md-6">
+                <label for="inputState">Tipo Servicio:</label>
+                <select asp-for="servicio.TipoServicio" asp-items="Html.GetEnumSelectList<TipoServicio>()"
+                    class="form-control">
+                </select>
+                <span class="text-danger" asp-validation-for="entidad.TipoServicio"></span>
+            </div>
             <div class="col">
                 <label for="inputState">Cupo</label>
                 <input asp-for="servicio.Cupo" type="number" class="form-control">

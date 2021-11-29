@@ -15,9 +15,9 @@ namespace E_Migrant.App.Frontend.Pages
         private readonly IRepositorioServicio _repositorioServicio = new RepositorioServicio(new appContext());
         public IEnumerable<Servicio> servicios { get; set; }
         [BindProperty(SupportsGet = true)]
-        public string filtroEstadoServicio {get;set;}
-        private readonly ILogger<ListaServiciosModel> _logger;
-        public ListaServiciosModel(ILogger<ListaServiciosModel> logger)
+        public string filtroTipoServicio {get;set;}
+        private readonly ILogger<ServiciosDisponiblesModel> _logger;
+        public ServiciosDisponiblesModel(ILogger<ServiciosDisponiblesModel> logger)
         {
         _logger = logger;
         }
@@ -25,7 +25,9 @@ namespace E_Migrant.App.Frontend.Pages
         public void OnGet()
         {
             servicios = _repositorioServicio.GetAllServicio();
-            _logger.LogInformation($"OnGet {filtroEstadoServicio}");
+            _logger.LogInformation($"OnGet {filtroTipoServicio}");
+            //string entidadId = servicios.TipoServicio.ToString();
+
         }
         public void OnPostFiltrar(string name)
         {

@@ -68,6 +68,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             {
                 servicioEncontrado.NombreServicio = servicio.NombreServicio;
                 servicioEncontrado.Entidad = servicio.Entidad;
+                servicioEncontrado.TipoServicio = servicio.TipoServicio;
                 servicioEncontrado.Cupo = servicio.Cupo;
                 servicioEncontrado.FechaInicio = servicio.FechaInicio;
                 servicioEncontrado.FechaFinal = servicio.FechaFinal;
