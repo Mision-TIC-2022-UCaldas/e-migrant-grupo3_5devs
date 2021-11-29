@@ -85,5 +85,15 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             }
             return migranteEncontrado;
         }
+
+        public Migrante SearchEmail(string email)
+        {
+            if (!String.IsNullOrEmpty(email))
+            {
+                //_appContext.Servicio.Include
+                return _appContext.Migrante.FirstOrDefault(m => m.Email == email);
+            }
+            return null;
+        }
     }
 }

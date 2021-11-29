@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20211129003426_Entidades2")]
-    partial class Entidades2
+    [Migration("20211129094347_Entidades")]
+    partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -166,6 +166,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EstadoNecesidad")
+                        .HasColumnType("int");
 
                     b.Property<int>("NivelPrioridad")
                         .HasColumnType("int");
