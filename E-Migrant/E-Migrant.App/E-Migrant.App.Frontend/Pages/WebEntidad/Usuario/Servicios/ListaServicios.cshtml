@@ -6,6 +6,20 @@
 
 <h2>Listado de servicios ofrecidos</h2>
 
+<form>
+    Filtra
+    <label asp-for="filtroEstadoServicio">Selecciona el tipo de servicio a consultar:</label>
+    <select asp-for="filtroEstadoServicio" >
+    <option value="Activos">Activos</option>
+    <option value="Cerrados">Cerrados</option>
+    <option value="ConCupo">ConCupo</option>
+    <option value="SinCupo">SinCupo</option>
+
+    </select>
+    <button type="submit" asp-page-handler="Filtrar">Buscar</button>
+</form>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -22,6 +36,10 @@
             {
             @foreach (var servicio in entidad.ServiciosOfrecidos)
             {
+                if (@Model.filtroEstadoServicio!=null)
+                {
+                    if(servicio.EstadoServicio.ToString() == @Model.filtroEstadoServicio){
+                          
             <tr>
                 <td>@servicio.NombreServicio</td>
                 <td>@servicio.Cupo</td>
@@ -43,6 +61,32 @@
                 </td>
                 
             </tr>
+                    }   
+                }else{
+                      
+            <tr>
+                <td>@servicio.NombreServicio</td>
+                <td>@servicio.Cupo</td>
+                <td>@servicio.FechaInicio</td>
+                <td>@servicio.FechaFinal</td>
+                <td>@servicio.EstadoServicio</td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroServicio"
+                    asp-route-idServicio="@servicio.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./Eliminarservicio" asp-route-idServicio="@servicio.Id">
+                        <i class="bi bi-trash" aria-hidden="true"></i>
+                        Inhabilitar
+                    </a>
+                </td>
+                
+            </tr>
+                }
+              
             }}
         </tr>
     </tbody>
