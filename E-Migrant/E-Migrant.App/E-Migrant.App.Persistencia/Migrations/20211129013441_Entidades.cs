@@ -68,7 +68,8 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Categorias = table.Column<int>(type: "int", nullable: false),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NivelPrioridad = table.Column<int>(type: "int", nullable: false)
+                    NivelPrioridad = table.Column<int>(type: "int", nullable: false),
+                    EstadoNecesidad = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -132,7 +133,8 @@ namespace E_Migrant.App.Persistencia.Migrations
                     Cupo = table.Column<int>(type: "int", nullable: false),
                     FechaInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaFinal = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EstadoServicio = table.Column<int>(type: "int", nullable: false)
+                    EstadoServicio = table.Column<int>(type: "int", nullable: false),
+                    Activo = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

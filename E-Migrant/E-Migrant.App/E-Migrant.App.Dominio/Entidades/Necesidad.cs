@@ -13,6 +13,7 @@ namespace E_Migrant.App.Dominio.Entidades
         [Required (ErrorMessage = "El Nivel de prioridad es obligatorio.")]
         public NivelPrioridad NivelPrioridad {get;set;} 
 
+        public EstadoNecesidad EstadoNecesidad {get;set;} 
 
     }
 }

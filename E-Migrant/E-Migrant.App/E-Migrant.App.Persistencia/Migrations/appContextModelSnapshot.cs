@@ -165,6 +165,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("EstadoNecesidad")
+                        .HasColumnType("int");
+
                     b.Property<int>("NivelPrioridad")
                         .HasColumnType("int");
 
