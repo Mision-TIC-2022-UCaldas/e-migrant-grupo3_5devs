@@ -1,0 +1,42 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades;
+@model E_Migrant.App.Frontend.Pages.ConsultarNecesidadModel
+@{
+}
+<h1>Necesidades</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tipo de necesidad</th>
+            <th>descripcion</th>
+            <th>nivel de prioridad</th>
+            <th>estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var necesidad in Model.Necesidades)
+            {
+            <tr>
+                <td>@necesidad.Categorias</td>
+                <td>@necesidad.Descripcion</td>
+                <td>@necesidad.NivelPrioridad</td>
+                <td>@necesidad.EstadoNecesidad</td>
+                <td>
+                    <a class="btn btn-secondary table-btn" asp-page="./RegistroNecesidad2"
+                    asp-route-idNecesidad="@necesidad.Id">
+                        <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                        Editar
+                    </a>
+                </td>
+            </tr>
+            }
+        </tr>
+    </tbody>
+</table>
+
+<a class="btn btn-primary table-btn"  asp-page="./Migrante">
+    <i class="bi bi-file-plus" aria-hidden="true"></i>
+    Volver
+</a>

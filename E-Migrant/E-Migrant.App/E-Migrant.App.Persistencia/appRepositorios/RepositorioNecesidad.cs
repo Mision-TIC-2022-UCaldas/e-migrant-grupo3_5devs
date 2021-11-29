@@ -72,6 +72,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
                 necesidadEncontrada.Categorias = necesidad.Categorias;
                 necesidadEncontrada.Descripcion = necesidad.Descripcion;
                 necesidadEncontrada.NivelPrioridad = necesidad.NivelPrioridad;
+                necesidadEncontrada.EstadoNecesidad = necesidad.EstadoNecesidad;
 
                 _appContext.SaveChanges();
             }

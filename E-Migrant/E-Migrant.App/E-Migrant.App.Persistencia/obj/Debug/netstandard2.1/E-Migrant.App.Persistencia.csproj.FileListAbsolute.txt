@@ -10,3 +10,16 @@ C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.csproj.CopyComplete
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.dll
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.pdb
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Persistencia.deps.json
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Persistencia.dll
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Persistencia.pdb
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.dll
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\bin\Debug\netstandard2.1\E-Migrant.App.Dominio.pdb
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.csproj.AssemblyReference.cache
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.AssemblyInfo.cs
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.csproj.CopyComplete
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.dll
+C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Persistencia\obj\Debug\netstandard2.1\E-Migrant.App.Persistencia.pdb

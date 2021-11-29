@@ -9,8 +9,8 @@
     <div class="container">
         <div class="form-group col-md-6">
             <label for="inputState">Tipo de necesidad:</label>
-            <select asp-for="necesidad.Categorias" placeholder="Tipo de necesidad" asp-items="Html.GetEnumSelectList<Categorias>()"
-                class="form-control">
+            <select asp-for="necesidad.Categorias" placeholder="Tipo de necesidad"
+                asp-items="Html.GetEnumSelectList<Categorias>()" class="form-control">
                 <option value=""></option>
             </select>
             <span class="text-danger" asp-validation-for="necesidad.Categorias"></span>
@@ -28,8 +28,8 @@
     <div class="container">
         <div class="form-group col-md-6">
             <label for="inputState">Nivel de prioridad:</label>
-            <select asp-for="necesidad.NivelPrioridad" aria-placeholder="prioridad" asp-items="Html.GetEnumSelectList<NivelPrioridad>()"
-                class="form-control">
+            <select asp-for="necesidad.NivelPrioridad" aria-placeholder="prioridad"
+                asp-items="Html.GetEnumSelectList<NivelPrioridad>()" class="form-control">
                 <option value=""></option>
             </select>
             <span class="text-danger" asp-validation-for="necesidad.NivelPrioridad"></span>
@@ -41,12 +41,19 @@
     </div>
 
     <div class="form-group col-md-6">
-        <a class="btn btn-primary table-btn" asp-page="./Migrante">
-        <i class="bi bi-file-plus" aria-hidden="true"></i>
-        Volver
-    </a>
+        <a class="btn btn-primary table-btn" asp-page="./ConsultarNecesidad">
+            <i class="bi bi-file-plus" aria-hidden="true"></i>
+            Mis Necesidades
+        </a>
     </div>
-    
+
+    <div class="form-group col-md-6">
+        <a class="btn btn-primary table-btn" asp-page="./Migrante">
+            <i class="bi bi-file-plus" aria-hidden="true"></i>
+            Volver
+        </a>
+    </div>
+
 
 
 </form>

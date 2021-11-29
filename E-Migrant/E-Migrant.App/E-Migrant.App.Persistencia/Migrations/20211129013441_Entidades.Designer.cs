@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Migrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20211128183311_Entidades")]
+    [Migration("20211129013441_Entidades")]
     partial class Entidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -167,6 +167,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("EstadoNecesidad")
+                        .HasColumnType("int");
+
                     b.Property<int>("NivelPrioridad")
                         .HasColumnType("int");
 
@@ -203,6 +206,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("bit");
 
                     b.Property<int>("Cupo")
                         .HasColumnType("int");
@@ -348,7 +354,7 @@ namespace E_Migrant.App.Persistencia.Migrations
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Servicio", b =>
                 {
                     b.HasOne("E_Migrant.App.Dominio.Entidades.Entidad", "Entidad")
-                        .WithMany()
+                        .WithMany("ServiciosOfrecidos")
                         .HasForeignKey("EntidadId");
 
                     b.Navigation("Entidad");
@@ -373,6 +379,11 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Navigation("migrante");
 
                     b.Navigation("Servicio");
+                });
+
+            modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Entidad", b =>
+                {
+                    b.Navigation("ServiciosOfrecidos");
                 });
 
             modelBuilder.Entity("E_Migrant.App.Dominio.Entidades.Migrante", b =>
