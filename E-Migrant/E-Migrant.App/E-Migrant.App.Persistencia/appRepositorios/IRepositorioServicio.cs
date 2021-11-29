@@ -19,5 +19,6 @@ namespace E_Migrant.App.Persistencia.appRepositorios
 
         // ver
         Servicio GetServicio(int idServicio);
+        IEnumerable<Servicio> GetServiciosEntidad(Entidad entidad);
     }
 }

@@ -189,6 +189,7 @@ C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebEntidad\Usuario\PanelControlEntidad.cshtml.g.cs
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebEntidad\Usuario\Servicios\InformacionEntidad.cshtml.g.cs
 C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\Usuario\Servicios\CalificarEntidad.cshtml.g.cs
+<<<<<<< HEAD
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\bin\Debug\netcoreapp3.1\E-Migrant.App.Frontend.StaticWebAssets.xml
@@ -383,3 +384,7 @@ C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Fron
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\ConsultarNecesidad.cshtml.g.cs
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebMigrante\RegistroNecesidad2.cshtml.g.cs
 C:\Users\stive\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebGerencia\GerenciaConsultarNecesidad.cshtml.g.cs
+=======
+C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebEntidad\Usuario\Servicios\RegistroServicio.cshtml.g.cs
+C:\Users\leand\Desktop\Hackatón\e-migrant-grupo3_5devs\E-Migrant\E-Migrant.App\E-Migrant.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\WebEntidad\Usuario\Servicios\ListaServicios.cshtml.g.cs
+>>>>>>> c27520557f2f24327edf2bde03725d6850ad3c4f

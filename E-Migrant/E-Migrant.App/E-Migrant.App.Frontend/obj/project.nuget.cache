@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "NWUUq5+W0GL4xc8T0FXuOPwOMGuTc0mWs7olI+/qcaggVkT/esinbG+AlKLH1XElFBTtRLAgWMmrG2kNd/oOFQ==",
+=======
+  "dgSpecHash": "ASAaTFbRJO32FROW5pjZmaGUCQdCaiPaNxJEAfLY+OkFiX2SYyBnxvBD56L03iL/yfxYRJGhRY5BoYaXyYQPAQ==",
+>>>>>>> c27520557f2f24327edf2bde03725d6850ad3c4f
   "success": true,
   "projectFilePath": "C:\\Users\\stive\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\E-Migrant.App.Frontend.csproj",
   "expectedPackageFiles": [

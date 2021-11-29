@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using E_Migrant.App.Dominio.Entidades;
+using Microsoft.EntityFrameworkCore;
 
 namespace E_Migrant.App.Persistencia.appRepositorios
 {
@@ -17,9 +18,9 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         /// Inyeccion de dependencias para indicar el contexto a utilizar
         /// </summary>
         /// <param name="appContext"></param>//
-        public RepositorioEntidad (appContext appContext)
+        public RepositorioEntidad(appContext appContext)
         {
-            _appContext=appContext;
+            _appContext = appContext;
         }
 
         public Entidad SearchFilter(string searchString)
@@ -34,6 +35,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         {
             if (!String.IsNullOrEmpty(email))
             {
+                //_appContext.Servicio.Include
                 return _appContext.Entidad.FirstOrDefault(m => m.Email == email);
             }
             return null;
@@ -41,10 +43,10 @@ namespace E_Migrant.App.Persistencia.appRepositorios
 
         Entidad IRepositorioEntidad.AddEntidad(Entidad entidad)
         {
-            var nitEncontrado = _appContext.Entidad.FirstOrDefault(m=>m.Nit == entidad.Nit);
+            var nitEncontrado = _appContext.Entidad.FirstOrDefault(m => m.Nit == entidad.Nit);
             if (nitEncontrado == null)
-            {    
-                var entidadAdicionada= _appContext.Entidad.Add(entidad);
+            {
+                var entidadAdicionada = _appContext.Entidad.Add(entidad);
                 _appContext.SaveChanges();
                 return entidadAdicionada.Entity;
             }
@@ -53,8 +55,8 @@ namespace E_Migrant.App.Persistencia.appRepositorios
 
         bool IRepositorioEntidad.DeleteEntidad(int idEntidad)
         {
-            var EntidadEncontrada= _appContext.Entidad.FirstOrDefault(m=>m.Id == idEntidad);
-            if(EntidadEncontrada==null)
+            var EntidadEncontrada = _appContext.Entidad.FirstOrDefault(m => m.Id == idEntidad);
+            if (EntidadEncontrada == null)
                 return false;
             _appContext.Entidad.Remove(EntidadEncontrada);
             _appContext.SaveChanges();
@@ -65,16 +67,23 @@ namespace E_Migrant.App.Persistencia.appRepositorios
         {
             return _appContext.Entidad;
         }
+        List<Entidad> IRepositorioEntidad.GetServicios(int idEntidad)
+        {
+            //var entidadEncontrada =  entidad.ServiciosOfrecidos
+            
+            return _appContext.Entidad.Include("ServiciosOfrecidos").Where(m => m.Id == idEntidad).ToList();
+           
+        }
 
         Entidad IRepositorioEntidad.GetEntidad(int idEntidad)
         {
-            return _appContext.Entidad.FirstOrDefault(m=>m.Id == idEntidad);
+            return _appContext.Entidad.FirstOrDefault(m => m.Id == idEntidad);
         }
 
         Entidad IRepositorioEntidad.UpdateEntidad(Entidad entidad)
         {
-            var entidadEncontrada = _appContext.Entidad.FirstOrDefault(m=>m.Id == entidad.Id);
-            if (entidadEncontrada!=null)
+            var entidadEncontrada = _appContext.Entidad.FirstOrDefault(m => m.Id == entidad.Id);
+            if (entidadEncontrada != null)
             {
                 entidadEncontrada.RazonSocial = entidad.RazonSocial;
                 entidadEncontrada.Nit = entidad.Nit;
@@ -86,10 +95,29 @@ namespace E_Migrant.App.Persistencia.appRepositorios
                 entidadEncontrada.Email = entidad.Email;
                 entidadEncontrada.PaginaWeb = entidad.PaginaWeb;
                 entidadEncontrada.evaluacionGerencia = entidad.evaluacionGerencia;
-                
+
                 _appContext.SaveChanges();
             }
             return entidadEncontrada;
+        }
+        void IRepositorioEntidad.AddServicio(int idEntidad, Servicio servicio)
+        {
+            var entidad = _appContext.Entidad.Find(idEntidad);
+            if (entidad != null)
+            {
+                if (entidad.ServiciosOfrecidos != null)
+                {
+                    entidad.ServiciosOfrecidos.Add(servicio);
+                }
+                else
+                {
+                    entidad.ServiciosOfrecidos = new List<Servicio>();
+                    entidad.ServiciosOfrecidos.Add(servicio);
+                    
+                }
+                _appContext.SaveChanges();
+            }
+
         }
     }
 }
