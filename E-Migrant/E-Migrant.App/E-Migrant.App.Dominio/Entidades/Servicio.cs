@@ -18,6 +18,7 @@ namespace E_Migrant.App.Dominio.Entidades
         [Required (ErrorMessage = "El estado es obligatorio.")]
         public EstadoServicio EstadoServicio {get;set;}
         public bool Activo {get;set;}
+        //public int MigrantesBeneficiados {get;set;}
 
         //Evaluaciones
         //public System.Collections.Generic.List<EvaluacionServicio> Evaluaciones { get; set; }
