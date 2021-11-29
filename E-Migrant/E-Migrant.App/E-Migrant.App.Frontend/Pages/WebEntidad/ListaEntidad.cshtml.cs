@@ -21,5 +21,7 @@ namespace E_Migrant.App.Frontend.Pages
             encontradoEntidad = _repositorioEntidad.SearchFilter(buscar);
             return Page();
         }
+        
+
     }
 }
