@@ -19,7 +19,8 @@ namespace E_Migrant.App.Frontend.Pages
         public string usuario;
         public IActionResult OnGet(int? idServicio)
         {
-            
+            usuario = User.Identity.Name;
+            entidad = _repositorioEntidad.SearchEmail(usuario);
             if (idServicio.HasValue)
             {
                 servicio = _repositorioServicio.GetServicio(idServicio.Value);

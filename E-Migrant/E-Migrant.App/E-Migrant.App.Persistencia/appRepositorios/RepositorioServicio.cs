@@ -72,6 +72,7 @@ namespace E_Migrant.App.Persistencia.appRepositorios
                 servicioEncontrado.FechaInicio = servicio.FechaInicio;
                 servicioEncontrado.FechaFinal = servicio.FechaFinal;
                 servicioEncontrado.EstadoServicio = servicio.EstadoServicio;
+                servicioEncontrado.Activo = servicio.Activo;
                 
                 _appContext.SaveChanges();
             }
