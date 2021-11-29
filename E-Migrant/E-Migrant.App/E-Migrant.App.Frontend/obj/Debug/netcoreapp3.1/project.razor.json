@@ -14472,6 +14472,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebEntidad\\Usuario\\Servicios\\RegistroServicio.cshtml",
+      "TargetPath": "Pages\\WebEntidad\\Usuario\\Servicios\\RegistroServicio.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\WebEntidad\\Usuario\\Servicios\\ListaServicios.cshtml",
+      "TargetPath": "Pages\\WebEntidad\\Usuario\\Servicios\\ListaServicios.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\leand\\Desktop\\Hackatón\\e-migrant-grupo3_5devs\\E-Migrant\\E-Migrant.App\\E-Migrant.App.Frontend\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

@@ -2751,7 +2751,7 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "E-Migrant.App.Dominio": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
         },
         "compile": {

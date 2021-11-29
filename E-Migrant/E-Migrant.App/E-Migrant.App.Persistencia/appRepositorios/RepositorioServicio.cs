@@ -43,6 +43,19 @@ namespace E_Migrant.App.Persistencia.appRepositorios
             return _appContext.Servicio;
         }
 
+        IEnumerable<Servicio> IRepositorioServicio.GetServiciosEntidad(Entidad entidad)
+        {
+            //var = _appContext.Servicio;
+            return _appContext.Servicio.Where(m=>m.Entidad == entidad);
+            /*foreach (var item in _appContext.Servicio)
+            {
+                item.Equals
+                _appContext.Servicio.FirstOrDefault(m=>m.Id == idServicio)
+            }
+            //return _appContext.Servicio.Where(m=>m.EntidadId == idEntidad);
+            _appContext*/
+        }
+
         Servicio IRepositorioServicio.GetServicio(int idServicio)
         {
             return _appContext.Servicio.FirstOrDefault(m=>m.Id == idServicio);
