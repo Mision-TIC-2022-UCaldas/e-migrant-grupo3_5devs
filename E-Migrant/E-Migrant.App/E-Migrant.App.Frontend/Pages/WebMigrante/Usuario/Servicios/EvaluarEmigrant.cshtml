@@ -1,0 +1,19 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades
+@model E_Migrant.App.Frontend.Pages.EvaluarEmigrantModel
+@{
+}</h1>
+<h1>Evalúanos</h1>
+
+<form method="post">
+    ¿Cómo calificas tu experiencia con EMigrant?
+    <label asp-for="migrante.evaluacionEMigrant">Selecciona un valor entre 1 y 5 Estrellas:</label>
+    <select asp-for="migrante.evaluacionEMigrant" >
+    <option value="1 Estrella">1 Estrella</option>
+    <option value="2 Estrellas">2 Estrellas</option>
+    <option value="3 Estrellas">3 Estrellas</option>
+    <option value="4 Estrellas">4 Estrellas</option>
+    <option value="5 Estrellas">5 Estrellas</option>
+    </select>
+    <button type="submit" >Enviar</button>
+</form>

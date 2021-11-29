@@ -6,9 +6,11 @@ namespace E_Migrant.App.Dominio.Entidades
     public class Servicio
     {
         public int Id {get;set;}
-        [Required (ErrorMessage = "El Tipo de servicio es obligatoria.")]
+        [Required (ErrorMessage = "El nombre del servicio es obligatoria.")]
         public string NombreServicio {get;set;}
         public Entidad Entidad {get;set;}
+        [Required (ErrorMessage = "El Tipo de servicio es obligatoria.")]
+        public TipoServicio TipoServicio {get;set;}
         [Range(1, 9999, ErrorMessage = "El valor debe estar {1} entre {2}")]
         public int Cupo {get;set;}
         [Range(typeof(DateTime), "1/1/2021", "31/12/2100", ErrorMessage = "La fecha debe estar {1} entre {2}")]

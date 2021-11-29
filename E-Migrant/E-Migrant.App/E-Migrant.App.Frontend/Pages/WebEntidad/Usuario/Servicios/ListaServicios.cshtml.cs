@@ -8,7 +8,7 @@ using E_Migrant.App.Dominio.Entidades;
 using E_Migrant.App.Persistencia.appRepositorios;
 using Microsoft.Extensions.Logging;
 
-namespace E_Migrant.App.Frontend.Pages
+namespace E_Migrant.App.Frontend.Pages.WebEntidad.Usuario.Servicios
 {
     public class ListaServiciosModel : PageModel
     {

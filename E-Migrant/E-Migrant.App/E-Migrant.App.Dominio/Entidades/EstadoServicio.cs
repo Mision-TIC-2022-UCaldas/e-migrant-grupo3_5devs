@@ -6,6 +6,7 @@ namespace E_Migrant.App.Dominio.Entidades
         Activos,
         Cerrados,
         ConCupo,
-        SinCupo
+        SinCupo,
+        Cancelado
     }
 }

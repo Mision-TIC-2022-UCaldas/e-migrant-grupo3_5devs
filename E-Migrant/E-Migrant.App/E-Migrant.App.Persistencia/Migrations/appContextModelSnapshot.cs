@@ -162,6 +162,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("evaluacionEMigrant")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("tipoDocumento")
                         .HasColumnType("int");
 
@@ -247,6 +250,9 @@ namespace E_Migrant.App.Persistencia.Migrations
                     b.Property<string>("NombreServicio")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TipoServicio")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

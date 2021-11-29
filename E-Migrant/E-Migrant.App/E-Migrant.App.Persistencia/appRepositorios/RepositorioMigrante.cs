@@ -80,10 +80,21 @@ namespace E_Migrant.App.Persistencia.appRepositorios
                 migranteEncontrado.Ciudad = migrante.Ciudad;
                 migranteEncontrado.SituacionLaboral = migrante.SituacionLaboral;
                 migranteEncontrado.Relacion = migrante.Relacion;
+                migranteEncontrado.evaluacionEMigrant = migrante.evaluacionEMigrant;
                 
                 _appContext.SaveChanges();
             }
             return migranteEncontrado;
+        }
+
+        public Migrante SearchEmail(string email)
+        {
+            if (!String.IsNullOrEmpty(email))
+            {
+                //_appContext.Servicio.Include
+                return _appContext.Migrante.FirstOrDefault(m => m.Email == email);
+            }
+            return null;
         }
     }
 }

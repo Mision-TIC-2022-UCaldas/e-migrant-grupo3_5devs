@@ -1,6 +1,6 @@
 ﻿@page
 @using E_Migrant.App.Dominio.Entidades
-@model E_Migrant.App.Frontend.Pages.ListaServiciosModel
+@model E_Migrant.App.Frontend.Pages.WebEntidad.Usuario.Servicios.ListaServiciosModel
 @{
 }
 
@@ -14,7 +14,7 @@
     <option value="Cerrados">Cerrados</option>
     <option value="ConCupo">ConCupo</option>
     <option value="SinCupo">SinCupo</option>
-
+    <option value="Cancelado">Cancelado</option>
     </select>
     <button type="submit" asp-page-handler="Filtrar">Buscar</button>
 </form>
@@ -91,6 +91,11 @@
         </tr>
     </tbody>
 </table>
+
+<a class="btn btn-primary table-btn" asp-page="./ListaServicios">
+    <i class="bi bi-trash" aria-hidden="true"></i>
+    Motrar todos
+</a>
 
 <a class="btn btn-primary table-btn" asp-page="../PanelControlEntidad">
     <i class="bi bi-trash" aria-hidden="true"></i>

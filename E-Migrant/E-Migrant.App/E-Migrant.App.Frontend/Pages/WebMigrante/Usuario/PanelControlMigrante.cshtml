@@ -1,0 +1,42 @@
+﻿@page
+@using E_Migrant.App.Dominio.Entidades
+@model E_Migrant.App.Frontend.Pages.PanelControlMigranteModel
+@{
+}
+<h2>Bienvenido al panel de administración de Migrantes de E-Migrant</h2>
+<h4>@Model.usuario</h4>
+<p>Selecciona los servicios que deseas ejecutar.</p>
+
+<div>
+    <div>
+        @if (@Model.migrante==null)
+        {
+            <a class="btn btn-primary table-btn" asp-page="./Servicios/InformacionMigrante">
+            <i class="bi bi-file-plus" aria-hidden="true"></i>
+            Registrar mi información personal
+            </a>
+        }else{
+            <a class="btn btn-secondary table-btn" asp-page="./Servicios/InformacionMigrante" asp-route-idMigrante="@Model.migrante.Id">
+            <i class="bi bi-pencil-square" aria-hidden="true"></i>
+            Actualizar mi información personal
+            </a>
+        }
+    </div>
+    <br>
+    <div>
+            <a class="btn btn-primary table-btn" asp-page="./Servicios/ServiciosDisponibles">
+            <i class="bi bi-file-plus" aria-hidden="true" ></i>
+            Consultar servicios disponibles 
+            </a>
+            <a class="btn btn-primary table-btn" asp-page="./Servicios/ListaServicios">
+            <i class="bi bi-file-plus" aria-hidden="true" ></i>
+            Lista de servicios
+            </a>
+            </a>
+            <a class="btn btn-primary table-btn" asp-page="./Servicios/EvaluarEmigrant">
+            <i class="bi bi-file-plus" aria-hidden="true" ></i>
+            Evaluar EMigrant
+            </a>
+    </div>
+   
+</div>

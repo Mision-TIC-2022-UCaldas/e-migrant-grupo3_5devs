@@ -22,5 +22,6 @@ namespace E_Migrant.App.Persistencia.appRepositorios
 
         // Busqueda por Filtro
         Migrante SearchFilter(String searchString);
+        Migrante SearchEmail(string email);
     }
 }

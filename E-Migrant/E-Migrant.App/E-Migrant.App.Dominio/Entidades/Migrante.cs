@@ -25,6 +25,7 @@ namespace E_Migrant.App.Dominio.Entidades
         public string Direccion {get;set;}
         public string Ciudad {get;set;}
         public string SituacionLaboral {get;set;}
+        public string evaluacionEMigrant {get;set;}
 
         public Relacion Relacion {get; set;}
         //Relaciones 
