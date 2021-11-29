@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using E_Migrant.App.Dominio.Entidades;
 using E_Migrant.App.Persistencia.appRepositorios;
+using System.Globalization;
 
 namespace E_Migrant.App.Frontend.Pages
 {
@@ -43,7 +44,11 @@ namespace E_Migrant.App.Frontend.Pages
         {
             usuario = User.Identity.Name;
             entidad = _repositorioEntidad.SearchEmail(usuario);
-            if (!ModelState.IsValid)
+            
+            if(servicio.FechaInicio > servicio.FechaFinal){
+                return RedirectToPage("./RegistroServicio");
+            }else{
+                if (!ModelState.IsValid)
             {
                 return Page();
             }
@@ -60,6 +65,8 @@ namespace E_Migrant.App.Frontend.Pages
                 }
             }
             return RedirectToPage("../PanelControlEntidad");
+            }
+            
         }
     }
 }
