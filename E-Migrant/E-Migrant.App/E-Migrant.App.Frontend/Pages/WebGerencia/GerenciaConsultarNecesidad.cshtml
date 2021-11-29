@@ -5,6 +5,16 @@
 }
 <h1>Necesidades</h1>
 <h2>Filtrar por:</h2>
+<form>
+    Filtra
+    <label asp-for="filtroNecesidad">Selecciona el estado de necesidad a consultar:</label>
+    <select asp-for="filtroNecesidad">
+    <option value="Activo">Activos</option>
+    <option value="Solucionado">Solucionados</option>
+    </select>
+    <button type="submit" asp-page-handler="Filtrar">Buscar</button>
+</form>
+
 
 
 <table class="table">
@@ -21,7 +31,9 @@
         <tr>
             @foreach (var necesidad in Model.Necesidades)
             {
-                if (necesidad.EstadoNecesidad.ToString() == "Solucionado")
+            if(@Model.filtroNecesidad!=null)
+            {    
+                if (necesidad.EstadoNecesidad.ToString() == @Model.filtroNecesidad)
                 {
                     <tr>
                     <td>@necesidad.Categorias</td>
@@ -30,14 +42,26 @@
                     <td>@necesidad.EstadoNecesidad</td>
                     </tr>
                 }
-
+                
+            }else{
+                 <tr>
+                    <td>@necesidad.Categorias</td>
+                    <td>@necesidad.Descripcion</td>
+                    <td>@necesidad.NivelPrioridad</td>
+                    <td>@necesidad.EstadoNecesidad</td>
+                    </tr>
+                }
             }
         </tr>
     </tbody>
 </table>
 
-<a class="btn btn-primary table-btn" asp-page="./Migrante">
-    <i class="bi bi-file-plus" aria-hidden="true"></i>
+<a class="btn btn-primary table-btn" asp-page="../WebGerencia/GerenciaConsultarNecesidad">
+    <i class="bi bi-trash" aria-hidden="true"></i>
+    Refrescar
+</a>
+<a class="btn btn-primary table-btn" asp-page="../WebGerencia/Gerencia">
+    <i class="bi bi-trash" aria-hidden="true"></i>
     Volver
 </a>
 
